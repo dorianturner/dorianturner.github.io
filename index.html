@@ -4,35 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dorian Turner</title>
-  <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; }
-    h1 { font-size: 2em; }
-    section { margin-bottom: 2rem; }
-    a { color: #0366d6; }
-  </style>
+
+  <!-- Atkinson Hyperlegible -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Dorian Turner</h1>
+  <main class="container">
+    <header class="header">
+      <h1>Dorian Turner</h1>
+      <p class="subtitle">Computing Student</p>
+    </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am a computing student at Imperial College London who has an interest in making and managing group projects.</p>
-  </section>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a computing student at Imperial College London with some experience in making stuff I find cool, both in a group, and on my own.
+        I enjoy working on technical projects and diving deep into the nitty gritty of how things work.
+      </p>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>FortDB</strong>: <a href="https://github.com/dorianturner/fortdb/tree/main">GitHub</a> - Crash Proof, Threadsafe, KV, Append Only Database.</li>
-      <li><strong>Roomie</strong>: <a href="https://github.com/dorianturner/Roomie">GitHub</a> - Android app to help university students find flatmates they will actually enjoy living with.</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <h3>FortDB</h3>
+          <p class="project-desc">
+            Append-only key-value database with a focus on durability, implementing all of the data structures and representations ourselves.
+          </p>
+          <a href="https://github.com/dorianturner/fortdb/tree/main" target="_blank">
+            View on GitHub →
+          </a>
+        </li>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your@email.com">dorianturnerwork@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/dorianturner">dorianturner</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/dorian-turner/">dorianturner linkedin</a></p>
-  </section>
+        <li>
+          <h3>Roomie</h3>
+          <p class="project-desc">
+            Android application helping university students find compatible flatmates
+            using tinder-style swiping logic to find groups with similar preferences to them.
+          </p>
+          <a href="https://github.com/dorianturner/Roomie" target="_blank">
+            View on GitHub →
+          </a>
+        </li>
+
+        <li>
+          <h3>Holy Brainfuck</h3>
+          <p class="project-desc">
+            A full (optimised) compiler for the Brainfuck language written in Holy C, including lexing, 
+            parsing, bytecode generation, assembly generation, and executable generation.
+          </p>
+          <a href="https://github.com/dorianturner/holy_brainfuck" target="_blank">
+            View on GitHub →
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li>Email: <a href="mailto:dorianturnerwork@gmail.com">dorianturnerwork@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/dorianturner" target="_blank">github.com/dorianturner</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/dorian-turner/" target="_blank">linkedin.com/in/dorian-turner</a></li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>Last Updated: Jan 14th 2026</p>
+    </footer>
+  </main>
 </body>
 </html>
-

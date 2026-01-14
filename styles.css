@@ -1,0 +1,126 @@
+/* --- Dark Greek / Olive Palette --- */
+:root {
+  --bg: #0f1411;          /* deep charcoal green */
+  --paper: #151b17;       /* dark marble */
+  --primary: #7fbf9a;     /* soft classical green */
+  --secondary: #3a6f54;   /* olive accent */
+  --accent: #1e3a2c;      /* subtle highlight */
+  --text: #e6efe9;
+  --muted: #9fb3a8;
+}
+
+/* --- Reset --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #18201b, var(--bg));
+  color: var(--text);
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4rem;
+  background: linear-gradient(180deg, var(--paper), #121815);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Header --- */
+.header {
+  text-align: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+h1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2.8rem;
+  margin: 0;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* --- Sections --- */
+section {
+  margin-top: 3rem;
+}
+
+h2 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: var(--primary);
+  border-left: 6px solid var(--secondary);
+  padding-left: 0.75rem;
+}
+
+/* --- Projects --- */
+.projects {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li {
+  padding: 1.6rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(145deg, #1a221d, #121815);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.projects h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.project-desc {
+  margin: 0 0 0.9rem 0;
+  color: var(--text);
+}
+
+/* --- Contact --- */
+.contact {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 0.6rem;
+}
+
+/* --- Links --- */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--primary);
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
