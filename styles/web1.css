@@ -1,0 +1,321 @@
+/* Web 1.0 look: a proudly homemade personal homepage with tables, bevels, and bright links. */
+html[data-theme="web1"] {
+  --ink: #111111;
+  --muted: #444444;
+  --paper: #d6d6d6;
+  --line: #777777;
+  --blue: #cceeff;
+  --blue-ink: #0000ee;
+  --lilac: #eadbff;
+  --orange: #ffcc66;
+  --orange-ink: #8b0000;
+  --cream: #ffff99;
+  --acid: #ccffcc;
+  --pink: #ff99cc;
+  --serif: "Times New Roman", Times, serif;
+  --sans: Arial, Helvetica, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+}
+
+html[data-theme="web1"] body {
+  min-height: 100vh;
+  background-color: var(--paper);
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 7px 7px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+}
+
+html[data-theme="web1"] a {
+  color: var(--blue-ink);
+  text-decoration: underline;
+}
+
+html[data-theme="web1"] a:visited { color: #800080; }
+html[data-theme="web1"] a:hover { color: #ff0000; }
+
+html[data-theme="web1"] .site-header,
+html[data-theme="web1"] main,
+html[data-theme="web1"] .site-footer {
+  width: min(960px, calc(100% - 32px));
+}
+
+html[data-theme="web1"] .site-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .7rem 1.5rem;
+  align-items: center;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 3px ridge #ffffff;
+  background: #ffffff;
+  box-shadow: 5px 5px 0 #555555;
+  font-family: var(--sans);
+}
+
+html[data-theme="web1"] .site-header::before {
+  position: absolute;
+  right: 8px;
+  bottom: -22px;
+  color: #000080;
+  content: "★ Welcome to my homepage ★";
+  font: bold 12px var(--serif);
+}
+
+html[data-theme="web1"] .wordmark {
+  color: #000080;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+html[data-theme="web1"] .wordmark-mark {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #000080;
+  color: #ffff00;
+  font: bold .75rem Arial, sans-serif;
+}
+
+html[data-theme="web1"] .site-header nav {
+  display: flex;
+  gap: 1rem;
+  font: bold 13px Arial, sans-serif;
+}
+
+html[data-theme="web1"] .site-header nav a { color: #0000ee; }
+
+html[data-theme="web1"] .header-tools {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding-top: 8px;
+  border-top: 2px groove #ffffff;
+}
+
+html[data-theme="web1"] .look-switcher {
+  color: #000080;
+  font: bold 12px Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+html[data-theme="web1"] .look-switcher select,
+html[data-theme="web1"] button,
+html[data-theme="web1"] input,
+html[data-theme="web1"] select {
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #eeeeee;
+  color: #111111;
+  font-family: Arial, sans-serif;
+}
+
+html[data-theme="web1"] .look-switcher select { min-width: 175px; padding: 3px 5px; }
+
+html[data-theme="web1"] .header-meta {
+  padding: 3px 7px;
+  border: 2px inset #ffffff;
+  background: #ffff00;
+  color: #000000;
+  font: bold 12px var(--mono);
+}
+
+html[data-theme="web1"] main { padding-top: 30px; }
+
+html[data-theme="web1"] .home-hero {
+  position: relative;
+  min-height: 430px;
+  grid-template-columns: 1.25fr .75fr;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 30px 24px 24px;
+  border: 4px ridge #ffffff;
+  background: #ffffff;
+  box-shadow: 8px 8px 0 #555555;
+}
+
+html[data-theme="web1"] .home-hero::before,
+html[data-theme="web1"] .project-header::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  background: #000080;
+  color: #ffffff;
+  content: "DORIAN TURNER'S PERSONAL WEB SITE";
+  font: bold 12px Arial, sans-serif;
+  letter-spacing: .04em;
+}
+
+html[data-theme="web1"] .home-hero > div { padding-top: 26px; }
+
+html[data-theme="web1"] .section-label {
+  padding: 3px 6px;
+  border: 2px outset #ffffff;
+  background: #ffff00;
+  color: #000080;
+  font: bold 12px var(--mono);
+  letter-spacing: 0;
+}
+
+html[data-theme="web1"] h1,
+html[data-theme="web1"] h2,
+html[data-theme="web1"] h3 {
+  color: #000080;
+  font-family: var(--serif);
+  letter-spacing: 0;
+}
+
+html[data-theme="web1"] h1 {
+  margin-top: 1.2rem;
+  font-size: clamp(3.8rem, 10vw, 7rem);
+  line-height: .85;
+  text-decoration: underline;
+}
+
+html[data-theme="web1"] h2 { font-size: clamp(2rem, 5vw, 3rem); text-decoration: underline; }
+html[data-theme="web1"] h3 { font-size: clamp(1.8rem, 4vw, 3rem); }
+html[data-theme="web1"] .hero-summary { color: #111111; font-size: 1.15rem; font-weight: normal; }
+
+html[data-theme="web1"] .hero-portrait {
+  width: min(100%, 285px);
+  margin: 0 0 0 auto;
+  border: 4px groove #ffffff;
+  background: #ffff99;
+  box-shadow: 5px 5px 0 #555555;
+}
+
+html[data-theme="web1"] .hero-portrait img { filter: saturate(.75) contrast(1.1); }
+html[data-theme="web1"] .hero-portrait figcaption { border-top: 3px groove #ffffff; color: #000080; font: bold 12px Arial, sans-serif; }
+
+html[data-theme="web1"] .about-section,
+html[data-theme="web1"] .split-section,
+html[data-theme="web1"] .contact-section {
+  border-top: 4px double #000080;
+}
+
+html[data-theme="web1"] .section-heading { border-top: 0; }
+html[data-theme="web1"] .about-copy { gap: 1.5rem; }
+
+html[data-theme="web1"] .about-card,
+html[data-theme="web1"] .index-card,
+html[data-theme="web1"] .section-note,
+html[data-theme="web1"] .text-columns p {
+  border: 3px outset #ffffff;
+  border-radius: 0;
+  box-shadow: 5px 5px 0 #555555;
+}
+
+html[data-theme="web1"] .about-card { min-height: 190px; padding: 1.2rem; }
+html[data-theme="web1"] .about-card-blue { background: #ccffff; }
+html[data-theme="web1"] .about-card-pink { background: #ffccff; }
+html[data-theme="web1"] .about-card-label,
+html[data-theme="web1"] .card-index {
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #000080;
+  color: #ffffff;
+  font: bold 12px Arial, sans-serif;
+}
+
+html[data-theme="web1"] .project-index { gap: 1.5rem; }
+
+html[data-theme="web1"] .index-card {
+  min-height: 285px;
+  padding: 1.3rem;
+  transition: none;
+}
+
+html[data-theme="web1"] .index-card:hover {
+  transform: none;
+  box-shadow: 5px 5px 0 #555555;
+}
+
+html[data-theme="web1"] .index-card-blue { background: #ccffff; }
+html[data-theme="web1"] .index-card-lilac { background: #eadbff; }
+html[data-theme="web1"] .index-card-orange { background: #ffcc99; }
+html[data-theme="web1"] .index-card-cream { background: #ffff99; }
+html[data-theme="web1"] .index-card-neutral { background: #eeeeee; }
+html[data-theme="web1"] .card-type { color: #800000; font: bold 12px var(--mono); }
+html[data-theme="web1"] .index-card p { font-size: .95rem; }
+html[data-theme="web1"] .card-actions { border-top: 2px dotted #000080; }
+html[data-theme="web1"] .card-link { color: #0000ee; font: bold 13px var(--mono); }
+html[data-theme="web1"] .card-git { border: 2px outset #ffffff; border-radius: 0; background: #eeeeee; color: #0000ee; }
+
+html[data-theme="web1"] .contact-links { gap: 1rem; }
+html[data-theme="web1"] .contact-links a {
+  min-height: 64px;
+  padding: .8rem 1rem;
+  border: 3px outset #ffffff;
+  background: #ccffff;
+  box-shadow: 5px 5px 0 #555555;
+  color: #0000ee;
+  font: bold 16px Arial, sans-serif;
+}
+
+html[data-theme="web1"] .contact-links a:nth-child(2) { background: #ffff99; }
+html[data-theme="web1"] .contact-links a:nth-child(3) { background: #ffccff; }
+html[data-theme="web1"] .contact-links a:hover { transform: none; box-shadow: 5px 5px 0 #555555; }
+
+html[data-theme="web1"] .site-footer {
+  border-top: 4px double #000080;
+  color: #000080;
+  font: bold 12px var(--mono);
+}
+
+/* Give the interactive project explainers the same raised-panel language. */
+html[data-theme="web1"] .project-header {
+  position: relative;
+  padding-top: 38px;
+  border: 4px ridge #ffffff;
+  background: #ffffff;
+  box-shadow: 8px 8px 0 #555555;
+}
+
+html[data-theme="web1"] .project-header > * { position: relative; }
+html[data-theme="web1"] .widget-shell,
+html[data-theme="web1"] .screenshot-card,
+html[data-theme="web1"] .fortdb-diagram,
+html[data-theme="web1"] .fortdb-flow-card {
+  border: 3px ridge #ffffff;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: 5px 5px 0 #555555;
+}
+
+html[data-theme="web1"] .widget-toolbar,
+html[data-theme="web1"] .phase-toolbar { border-bottom: 2px dotted #000080; }
+html[data-theme="web1"] .widget-card,
+html[data-theme="web1"] .pipeline-step,
+html[data-theme="web1"] .phase-tab,
+html[data-theme="web1"] .phase-route div,
+html[data-theme="web1"] .meantime-step,
+html[data-theme="web1"] .architecture-node,
+html[data-theme="web1"] .fortdb-flow-node { border: 2px outset #ffffff; border-radius: 0; background: #eeeeee; }
+html[data-theme="web1"] .widget-card:nth-child(3n + 1),
+html[data-theme="web1"] .pipeline-step.is-active,
+html[data-theme="web1"] .phase-tab.is-active { background: #ccffff; }
+html[data-theme="web1"] .visual-svg,
+html[data-theme="web1"] .code-preview { border: 3px inset #ffffff; border-radius: 0; }
+html[data-theme="web1"] .code-preview { background: #000000; color: #00ff00; }
+html[data-theme="web1"] .widget-status,
+html[data-theme="web1"] .lane-label,
+html[data-theme="web1"] .diagram-heading span { color: #000080; }
+
+@media (max-width: 760px) {
+  html[data-theme="web1"] .site-header { grid-template-columns: 1fr; }
+  html[data-theme="web1"] .site-header nav { grid-row: 2; }
+  html[data-theme="web1"] .header-tools { grid-column: auto; flex-wrap: wrap; }
+  html[data-theme="web1"] .home-hero { grid-template-columns: 1fr; }
+  html[data-theme="web1"] .hero-portrait { margin: 0; }
+}

@@ -1,0 +1,363 @@
+/* Organic fungus glassmorphism look. Activated by the shared look selector. */
+html[data-theme="fungus"] {
+  --ink: #eef8e9;
+  --muted: #abc5aa;
+  --paper: #08140f;
+  --line: rgba(196, 235, 190, .26);
+  --blue: rgba(133, 193, 137, .2);
+  --blue-ink: #c8f2bb;
+  --lilac: rgba(113, 86, 128, .32);
+  --orange: rgba(206, 146, 91, .36);
+  --orange-ink: #f1bd8b;
+  --cream: rgba(210, 226, 168, .22);
+  --acid: rgba(187, 230, 151, .34);
+  --pink: rgba(206, 150, 173, .34);
+  --moss: #82b67c;
+  --mushroom: #d79b76;
+  --glass: rgba(214, 242, 207, .18);
+  --display: "Space Grotesk", "DM Sans", system-ui, sans-serif;
+}
+
+html[data-theme="fungus"] body {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 8% 12%, rgba(122, 181, 112, .27), transparent 27rem),
+    radial-gradient(ellipse at 92% 28%, rgba(151, 101, 145, .18), transparent 25rem),
+    radial-gradient(ellipse at 52% 95%, rgba(204, 145, 86, .14), transparent 32rem),
+    #08140f;
+  color: var(--ink);
+  font-family: var(--display);
+}
+html[data-theme="fungus"] body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(210, 246, 191, .09) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 80% 70%, rgba(215, 155, 118, .08) 0 1px, transparent 1.5px),
+    linear-gradient(116deg, transparent 0 46%, rgba(187, 230, 151, .035) 46.1% 46.2%, transparent 46.3%);
+  background-size: 87px 91px, 131px 117px, 100% 100%;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+  pointer-events: none;
+}
+html[data-theme="fungus"] body::after {
+  position: fixed;
+  z-index: -1;
+  right: -8rem;
+  bottom: 4%;
+  width: 24rem;
+  height: 24rem;
+  border: 1px solid rgba(184, 225, 164, .12);
+  border-radius: 48% 52% 57% 43%;
+  box-shadow: 0 0 0 28px rgba(184, 225, 164, .035), 0 0 0 56px rgba(184, 225, 164, .025);
+  content: "";
+  transform: rotate(24deg);
+  pointer-events: none;
+}
+
+html[data-theme="fungus"] a { color: inherit; }
+html[data-theme="fungus"] a:focus-visible,
+html[data-theme="fungus"] button:focus-visible,
+html[data-theme="fungus"] input:focus-visible,
+html[data-theme="fungus"] select:focus-visible { outline: 2px solid var(--moss); outline-offset: 4px; }
+html[data-theme="fungus"] .site-header,
+html[data-theme="fungus"] main,
+html[data-theme="fungus"] .site-footer { width: min(1220px, calc(100% - 56px)); }
+
+html[data-theme="fungus"] .site-header {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.2rem;
+  padding: .85rem 1rem;
+  border: 1px solid rgba(208, 244, 199, .28);
+  border-radius: 19px 29px 23px 31px;
+  background: linear-gradient(135deg, rgba(210, 242, 203, .15), rgba(70, 116, 77, .08));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 18px 48px rgba(0,0,0,.22);
+  backdrop-filter: blur(18px) saturate(125%);
+  font-size: .76rem;
+}
+html[data-theme="fungus"] .wordmark { font-family: var(--display); font-size: .8rem; font-weight: 700; letter-spacing: .03em; }
+html[data-theme="fungus"] .wordmark-mark {
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px solid rgba(222, 251, 205, .5);
+  border-radius: 54% 46% 61% 39%;
+  background: radial-gradient(circle at 35% 28%, #dff9bf, #74a96e 58%, #355d45);
+  color: #122415;
+  font-family: var(--display);
+  font-size: .67rem;
+  box-shadow: 0 0 22px rgba(147, 220, 128, .22);
+  transform: rotate(-8deg);
+}
+html[data-theme="fungus"] nav { gap: .3rem; color: var(--muted); }
+html[data-theme="fungus"] nav a { padding: .45rem .7rem; border: 1px solid transparent; border-radius: 999px; font-family: var(--display); font-weight: 600; }
+html[data-theme="fungus"] nav a:hover { border-color: rgba(196, 235, 190, .35); background: rgba(196, 235, 190, .1); color: var(--ink); }
+html[data-theme="fungus"] .header-meta {
+  padding: .4rem .55rem;
+  border: 1px solid rgba(210, 242, 203, .32);
+  border-radius: 12px 6px 10px 7px;
+  background: rgba(137, 187, 119, .12);
+  color: var(--blue-ink);
+  font: .63rem var(--mono);
+}
+html[data-theme="fungus"] .header-tools { gap: .8rem; }
+html[data-theme="fungus"] .look-switcher { color: var(--muted); font: .63rem var(--mono); text-transform: uppercase; }
+html[data-theme="fungus"] .look-switcher select {
+  min-width: 10.5rem;
+  padding: .4rem .55rem;
+  border: 1px solid rgba(196, 235, 190, .36);
+  border-radius: 13px 7px 11px 9px;
+  background: rgba(7, 25, 15, .62);
+  color: var(--ink);
+  font: .68rem var(--display);
+  backdrop-filter: blur(12px);
+}
+
+html[data-theme="fungus"] main { padding-top: 4.5rem; }
+html[data-theme="fungus"] h1,
+html[data-theme="fungus"] h2,
+html[data-theme="fungus"] h3 { font-family: var(--display); font-weight: 700; letter-spacing: -.065em; }
+html[data-theme="fungus"] h1 { font-size: clamp(4.2rem, 9vw, 8.5rem); line-height: .8; background: linear-gradient(110deg, #f5fff0 20%, #a9df9a 58%, #ddb2d1); background-clip: text; -webkit-background-clip: text; color: transparent; }
+html[data-theme="fungus"] h2 { font-size: clamp(2.8rem, 5.4vw, 5.2rem); line-height: .88; }
+html[data-theme="fungus"] h3 { font-size: clamp(1.9rem, 3.5vw, 3.4rem); line-height: .93; }
+html[data-theme="fungus"] .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-bottom: 1rem;
+  padding: .3rem .6rem;
+  border: 1px solid rgba(220, 250, 210, .48);
+  border-radius: 16px 8px 13px 10px;
+  background: rgba(7, 25, 15, .72);
+  color: #e3f8d9;
+  font: .62rem var(--mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+html[data-theme="fungus"] .section-label::before { width: .4rem; height: .4rem; border-radius: 50% 42% 58% 40%; background: var(--mushroom); box-shadow: 0 0 10px rgba(215,155,118,.5); content: ""; }
+html[data-theme="fungus"] .hero-summary,
+html[data-theme="fungus"] .section-note,
+html[data-theme="fungus"] .text-columns,
+html[data-theme="fungus"] .contact-links,
+html[data-theme="fungus"] .project-summary,
+html[data-theme="fungus"] .project-section-heading p,
+html[data-theme="fungus"] .explain-card p { color: var(--muted); }
+html[data-theme="fungus"] .hero-summary { max-width: 38rem; font-size: 1.08rem; }
+
+html[data-theme="fungus"] .home-hero {
+  position: relative;
+  min-height: 500px;
+  padding: 3.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(210, 242, 203, .34);
+  border-radius: 28px 42px 25px 38px;
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(205, 153, 188, .18), transparent 17rem),
+    radial-gradient(ellipse at 16% 84%, rgba(136, 193, 122, .2), transparent 19rem),
+    linear-gradient(135deg, rgba(214, 244, 205, .15), rgba(50, 91, 61, .08));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(109, 173, 107, .15), 0 25px 70px rgba(0,0,0,.28);
+  backdrop-filter: blur(22px) saturate(130%);
+}
+html[data-theme="fungus"] .home-hero::before {
+  position: absolute;
+  right: 14%;
+  bottom: -2rem;
+  width: 9rem;
+  height: 13rem;
+  border-radius: 50% 50% 34% 34% / 16% 16% 70% 70%;
+  background: linear-gradient(90deg, rgba(215,155,118,.07), rgba(222,248,204,.22), rgba(215,155,118,.06));
+  box-shadow: 0 0 40px rgba(180, 230, 151, .1);
+  content: "";
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+html[data-theme="fungus"] .home-hero::after {
+  position: absolute;
+  top: 2.5rem;
+  right: 5%;
+  width: 18rem;
+  height: 7rem;
+  border-radius: 50% 50% 45% 55% / 70% 65% 35% 30%;
+  background: radial-gradient(ellipse at 50% 35%, rgba(238, 198, 185, .36), rgba(128, 74, 104, .16) 58%, transparent 60%);
+  box-shadow: 0 0 22px rgba(217, 155, 118, .1);
+  content: "";
+  transform: rotate(-7deg);
+  pointer-events: none;
+}
+html[data-theme="fungus"] .hero-portrait {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 300px);
+  margin: 0 0 0 auto;
+  padding: .45rem;
+  border: 1px solid rgba(211, 245, 204, .42);
+  border-radius: 24px 35px 20px 31px;
+  background: rgba(219, 245, 210, .12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 18px 45px rgba(0,0,0,.25);
+  backdrop-filter: blur(16px);
+  transform: rotate(2deg);
+}
+html[data-theme="fungus"] .hero-portrait img { aspect-ratio: 4 / 5; border-radius: 19px 28px 16px 24px; filter: saturate(.82) contrast(1.02); }
+html[data-theme="fungus"] .hero-portrait figcaption { padding: .65rem .45rem .2rem; border-top: 1px solid rgba(202, 240, 194, .26); color: var(--blue-ink); font: .65rem var(--mono); letter-spacing: .05em; text-align: center; text-transform: uppercase; }
+
+html[data-theme="fungus"] .about-section,
+html[data-theme="fungus"] .split-section,
+html[data-theme="fungus"] .contact-section,
+html[data-theme="fungus"] .project-section { border-top: 1px solid var(--line); }
+html[data-theme="fungus"] .section-heading { border-top: 1px solid var(--line); }
+html[data-theme="fungus"] .section-note,
+html[data-theme="fungus"] .about-card,
+html[data-theme="fungus"] .index-card,
+html[data-theme="fungus"] .text-columns p,
+html[data-theme="fungus"] .contact-links a,
+html[data-theme="fungus"] .explain-card,
+html[data-theme="fungus"] .flow-node,
+html[data-theme="fungus"] .widget-shell,
+html[data-theme="fungus"] .widget-card,
+html[data-theme="fungus"] .screenshot-card,
+html[data-theme="fungus"] .fortdb-diagram,
+html[data-theme="fungus"] .architecture-node,
+html[data-theme="fungus"] .meantime-step,
+html[data-theme="fungus"] .pipeline-step,
+html[data-theme="fungus"] .phase-tab,
+html[data-theme="fungus"] .fortdb-flow-card,
+html[data-theme="fungus"] .fortdb-flow-node {
+  border: 1px solid rgba(207, 241, 199, .25);
+  border-radius: 20px 13px 25px 17px;
+  background: linear-gradient(135deg, rgba(225, 249, 216, .22), rgba(63, 105, 68, .1));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.23), inset 0 -1px 0 rgba(104, 170, 101, .15), 0 22px 52px rgba(0,0,0,.25);
+  backdrop-filter: blur(25px) saturate(145%);
+  -webkit-backdrop-filter: blur(25px) saturate(145%);
+}
+html[data-theme="fungus"] .about-card-blue,
+html[data-theme="fungus"] .index-card-blue { background: linear-gradient(135deg, rgba(133, 193, 137, .24), rgba(47, 93, 62, .13)); }
+html[data-theme="fungus"] .about-card-pink,
+html[data-theme="fungus"] .index-card-lilac { background: linear-gradient(135deg, rgba(192, 147, 190, .2), rgba(70, 54, 83, .15)); }
+html[data-theme="fungus"] .index-card-orange { background: linear-gradient(135deg, rgba(215, 155, 118, .27), rgba(82, 57, 46, .14)); }
+html[data-theme="fungus"] .index-card-cream,
+html[data-theme="fungus"] .index-card-neutral { background: linear-gradient(135deg, rgba(209, 225, 164, .2), rgba(61, 91, 62, .13)); }
+html[data-theme="fungus"] .about-card:hover,
+html[data-theme="fungus"] .index-card:hover,
+html[data-theme="fungus"] .phase-tab:hover,
+html[data-theme="fungus"] .phase-tab.is-active {
+  border-color: rgba(218, 251, 203, .6);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 0 0 4px rgba(142, 199, 129, .06), 0 22px 50px rgba(0,0,0,.28);
+  transform: translateY(-5px) rotate(-1deg);
+}
+html[data-theme="fungus"] .about-card-label {
+  border: 1px solid rgba(221, 250, 211, .42);
+  border-radius: 12px 7px 10px 6px;
+  background: rgba(6, 22, 12, .82);
+  color: #e6f9dc;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 7px 18px rgba(0,0,0,.2);
+}
+html[data-theme="fungus"] .card-index {
+  padding: .3rem .45rem;
+  border: 1px solid rgba(221, 250, 211, .36);
+  border-radius: 10px 6px 9px 5px;
+  background: rgba(6, 22, 12, .72);
+  color: #e6f9dc;
+  font-family: var(--mono);
+}
+html[data-theme="fungus"] .card-type { color: #d5ebcd; font-family: var(--mono); font-size: .62rem; }
+html[data-theme="fungus"] .index-card h3 { color: var(--ink); }
+html[data-theme="fungus"] .index-card p { color: #c6ddc0; }
+html[data-theme="fungus"] .card-actions { border-top: 1px solid rgba(206, 239, 199, .24); }
+html[data-theme="fungus"] .card-link { color: var(--blue-ink); font-family: var(--mono); }
+html[data-theme="fungus"] .card-git,
+html[data-theme="fungus"] .project-button,
+html[data-theme="fungus"] select,
+html[data-theme="fungus"] button {
+  border: 1px solid rgba(206, 239, 199, .32);
+  border-radius: 13px 7px 11px 9px;
+  background: rgba(7, 25, 15, .5);
+  color: #e1f7d7;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 8px 20px rgba(0,0,0,.12);
+  font-family: var(--mono);
+  backdrop-filter: blur(10px);
+}
+html[data-theme="fungus"] .card-git:hover,
+html[data-theme="fungus"] .project-button:hover,
+html[data-theme="fungus"] button:hover { border-color: var(--mushroom); background: rgba(215, 155, 118, .16); color: #ffe1c9; transform: translateY(-2px); }
+html[data-theme="fungus"] .contact-links a { color: var(--ink); }
+html[data-theme="fungus"] .contact-links a:nth-child(2) { border-color: rgba(215, 155, 118, .34); }
+html[data-theme="fungus"] .contact-links a:nth-child(3) { border-color: rgba(190, 224, 151, .38); }
+html[data-theme="fungus"] .contact-links span { color: var(--blue-ink); }
+html[data-theme="fungus"] .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-family: var(--mono); }
+
+/* Project pages and widgets keep the same translucent biological palette. */
+html[data-theme="fungus"] .project-nav { border: 1px solid rgba(206, 239, 199, .22); border-radius: 14px 8px 12px 9px; background: rgba(214, 242, 207, .08); color: var(--muted); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 12px 30px rgba(0,0,0,.16); backdrop-filter: blur(14px); }
+html[data-theme="fungus"] .project-nav a:hover { color: var(--blue-ink); }
+html[data-theme="fungus"] .project-header {
+  margin-top: 2.5rem;
+  padding: 3rem;
+  border: 1px solid rgba(211, 245, 204, .34);
+  border-radius: 27px 39px 22px 33px;
+  background:
+    radial-gradient(ellipse at 88% 12%, rgba(215,155,118,.25), transparent 15rem),
+    linear-gradient(135deg, rgba(225, 249, 216, .22), rgba(50, 91, 61, .1));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.23), 0 26px 65px rgba(0,0,0,.28);
+  backdrop-filter: blur(25px) saturate(145%);
+  -webkit-backdrop-filter: blur(25px) saturate(145%);
+}
+html[data-theme="fungus"] .project-header h1 { font-size: clamp(3.8rem, 8vw, 7.5rem); }
+html[data-theme="fungus"] .project-summary { color: #c6ddc0; }
+html[data-theme="fungus"] .project-facts { border-top: 1px solid rgba(206, 239, 199, .3); }
+html[data-theme="fungus"] .project-facts div { border-bottom: 1px solid rgba(206, 239, 199, .2); }
+html[data-theme="fungus"] .project-facts dt { color: var(--blue-ink); }
+html[data-theme="fungus"] .project-facts dd { color: var(--ink); }
+html[data-theme="fungus"] .project-section-heading p { color: var(--muted); }
+html[data-theme="fungus"] .explain-card { background: rgba(225, 249, 216, .16); }
+html[data-theme="fungus"] .explain-card .section-label { margin: -1.1rem -1.1rem 1.25rem; border-left: 0; border-right: 0; border-top: 0; border-radius: 18px 10px 0 0; }
+html[data-theme="fungus"] .widget-shell { background: rgba(8, 20, 15, .54); }
+html[data-theme="fungus"] .widget-toolbar,
+html[data-theme="fungus"] .phase-toolbar { border-bottom: 1px solid rgba(206, 239, 199, .22); }
+html[data-theme="fungus"] .widget-card,
+html[data-theme="fungus"] .flow-node,
+html[data-theme="fungus"] .pipeline-step,
+html[data-theme="fungus"] .phase-tab,
+html[data-theme="fungus"] .phase-route div,
+html[data-theme="fungus"] .meantime-step,
+html[data-theme="fungus"] .architecture-node,
+html[data-theme="fungus"] .fortdb-flow-node { background: rgba(214, 242, 207, .12); }
+html[data-theme="fungus"] .phase-tab:hover,
+html[data-theme="fungus"] .phase-tab.is-active { background: rgba(185, 225, 161, .19); }
+html[data-theme="fungus"] .phase-detail,
+html[data-theme="fungus"] .fortdb-diagram { background: rgba(214, 242, 207, .09); }
+html[data-theme="fungus"] .code-preview { border: 1px solid rgba(206, 239, 199, .22); border-radius: 12px; background: rgba(4, 13, 8, .72); color: #d6f5c6; }
+html[data-theme="fungus"] .visual-svg { border: 1px solid rgba(206, 239, 199, .28); border-radius: 16px 11px 14px 10px; background: rgba(4, 16, 9, .68); }
+html[data-theme="fungus"] .svg-label { fill: var(--muted); }
+html[data-theme="fungus"] .svg-wall { stroke: var(--blue-ink); }
+html[data-theme="fungus"] .svg-player { fill: var(--moss); }
+html[data-theme="fungus"] .svg-enemy { fill: var(--mushroom); }
+html[data-theme="fungus"] .svg-sensor { fill: #e8df9f; }
+html[data-theme="fungus"] .svg-vision { fill: rgba(184, 225, 164, .18); stroke: var(--blue-ink); }
+html[data-theme="fungus"] .svg-smoke { fill: rgba(184, 225, 164, .16); }
+html[data-theme="fungus"] .flow-arrow,
+html[data-theme="fungus"] .tree-line i,
+html[data-theme="fungus"] .write-path > i,
+html[data-theme="fungus"] .version-diagram > i { color: var(--blue-ink); }
+html[data-theme="fungus"] .screenshot-frame { background: rgba(4, 16, 9, .6); }
+html[data-theme="fungus"] .screenshot-card figcaption span { color: var(--muted); }
+
+@media (max-width: 760px) {
+  html[data-theme="fungus"] .site-header,
+  html[data-theme="fungus"] main,
+  html[data-theme="fungus"] .site-footer { width: min(100% - 32px, 600px); }
+  html[data-theme="fungus"] .site-header { margin-top: 1rem; }
+  html[data-theme="fungus"] .home-hero { padding: 2rem 1.25rem; }
+  html[data-theme="fungus"] .home-hero::after { right: -6rem; }
+  html[data-theme="fungus"] .hero-portrait { width: min(100%, 270px); margin: 0; }
+  html[data-theme="fungus"] .project-header { padding: 2rem 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="fungus"] .about-card,
+  html[data-theme="fungus"] .index-card,
+  html[data-theme="fungus"] .explain-card,
+  html[data-theme="fungus"] .project-header,
+  html[data-theme="fungus"] .hero-portrait { transform: none; }
+}

@@ -1,0 +1,87 @@
+/* Shared geometry contract: themes can change the surface, never the page skeleton. */
+html[data-theme] {
+  --page-width: 1240px;
+  --page-gutter: 56px;
+  --hero-height: 500px;
+  --card-height: 330px;
+}
+
+html[data-theme] body { font-size: 16px; }
+html[data-theme] .site-header,
+html[data-theme] main,
+html[data-theme] .site-footer { width: min(var(--page-width), calc(100% - var(--page-gutter))); }
+
+html[data-theme] .site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 78px;
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+}
+
+html[data-theme] .site-header nav { order: initial; width: auto; }
+html[data-theme] .header-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: auto;
+  margin-left: auto;
+  padding-top: 0;
+  border-top: 0;
+}
+
+html[data-theme] main { padding-top: 5rem; }
+html[data-theme] .home-hero {
+  grid-template-columns: 1.25fr .75fr;
+  align-items: center;
+  min-height: var(--hero-height);
+  padding: 4.5rem 3rem 3rem;
+}
+html[data-theme] .hero-portrait { width: min(100%, 320px); margin: 0 0 0 auto; }
+html[data-theme] h1 { font-size: clamp(4rem, 10vw, 9rem); line-height: .82; }
+html[data-theme] h2 { font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: .88; }
+html[data-theme] h3 { font-size: clamp(2.2rem, 4vw, 4rem); line-height: .95; }
+
+html[data-theme] .about-copy { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+html[data-theme] .about-card,
+html[data-theme] .index-card { min-height: var(--card-height); }
+html[data-theme] .index-card { padding: 1.5rem; }
+html[data-theme] .contact-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+html[data-theme] .project-main { padding-top: 2.5rem; }
+html[data-theme] .project-header {
+  grid-template-columns: 1.2fr .8fr;
+  align-items: end;
+  min-height: var(--hero-height);
+  margin-top: 3rem;
+  padding: 4.5rem 3rem 3rem;
+}
+html[data-theme] .project-header h1 { font-size: clamp(4rem, 9vw, 8rem); line-height: .82; }
+html[data-theme] .project-section { padding: 3rem 0 5rem; }
+html[data-theme] .project-section-heading { grid-template-columns: 1fr 1.6fr; }
+html[data-theme] .explain-grid { grid-template-columns: repeat(3, 1fr); }
+html[data-theme] .explain-card { min-height: 190px; }
+
+@media (max-width: 760px) {
+  html[data-theme] {
+    --page-gutter: 32px;
+    --hero-height: auto;
+    --card-height: 280px;
+  }
+  html[data-theme] .site-header,
+  html[data-theme] main,
+  html[data-theme] .site-footer { width: min(calc(100% - var(--page-gutter)), 600px); }
+  html[data-theme] .site-header { margin-top: 1rem; }
+  html[data-theme] .site-header nav { order: 3; width: 100%; }
+  html[data-theme] .header-tools { order: 2; margin-left: auto; }
+  html[data-theme] .home-hero,
+  html[data-theme] .project-header { grid-template-columns: 1fr; gap: 2rem; }
+  html[data-theme] .home-hero { padding: 3rem 1.25rem 2rem; }
+  html[data-theme] .project-header { padding: 4rem 1.25rem 2rem; }
+  html[data-theme] .hero-portrait { margin: 0; }
+  html[data-theme] .about-copy,
+  html[data-theme] .explain-grid { grid-template-columns: 1fr; }
+  html[data-theme] .contact-links { grid-template-columns: 1fr; }
+  html[data-theme] .project-section-heading { grid-template-columns: 1fr; gap: 2rem; }
+}

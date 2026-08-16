@@ -1,0 +1,250 @@
+/* Neo-brutalist portfolio theme. This file owns Neo visuals only. */
+html[data-theme="neo"] {
+  --ink: #111111;
+  --muted: #3f4650;
+  --paper: #fff8e8;
+  --line: #111111;
+  --blue: #8de7ff;
+  --blue-ink: #111111;
+  --lilac: #d7b7ff;
+  --orange: #ff8a3d;
+  --orange-ink: #111111;
+  --cream: #ffe45e;
+  --acid: #c5f36c;
+  --pink: #ff6b8a;
+}
+
+html[data-theme="neo"] body { background: var(--paper); color: var(--ink); font-weight: 500; }
+html[data-theme="neo"] a:focus-visible,
+html[data-theme="neo"] button:focus-visible,
+html[data-theme="neo"] input:focus-visible,
+html[data-theme="neo"] select:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+html[data-theme="neo"] .site-header { margin-top: 1.5rem; padding: 1rem 1.1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 6px 6px 0 var(--ink); }
+html[data-theme="neo"] .wordmark { font-weight: 900; letter-spacing: -.04em; }
+html[data-theme="neo"] .wordmark-mark { width: 2.25rem; height: 2.25rem; border-radius: 0; background: var(--ink); color: var(--cream); font-weight: 700; box-shadow: 3px 3px 0 var(--orange); }
+html[data-theme="neo"] nav { gap: .5rem; color: var(--ink); }
+html[data-theme="neo"] nav a { padding: .45rem .65rem; border: 2px solid transparent; font-weight: 800; }
+html[data-theme="neo"] nav a:hover { border-color: var(--ink); background: var(--cream); color: var(--ink); }
+html[data-theme="neo"] .header-meta { padding: .35rem .5rem; border: 2px solid var(--ink); background: var(--acid); color: var(--ink); font-weight: 700; }
+html[data-theme="neo"] main { padding-top: 5rem; }
+html[data-theme="neo"] .home-hero { position: relative; min-height: 480px; padding: 3rem; border: 4px solid var(--ink); background: var(--yellow, var(--cream)); box-shadow: 12px 12px 0 var(--ink); }
+html[data-theme="neo"] .section-label { display: inline-block; margin-bottom: 1rem; padding: .25rem .45rem; background: var(--pink); color: var(--ink); font-weight: 700; letter-spacing: .06em; }
+html[data-theme="neo"] h1,
+html[data-theme="neo"] h2,
+html[data-theme="neo"] h3 { font-family: var(--sans); font-weight: 900; letter-spacing: -.08em; }
+html[data-theme="neo"] h1 { font-size: clamp(4rem, 10vw, 9rem); line-height: .82; }
+html[data-theme="neo"] h2 { font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: .88; }
+html[data-theme="neo"] .hero-summary,
+html[data-theme="neo"] .section-note,
+html[data-theme="neo"] .text-columns,
+html[data-theme="neo"] .contact-links,
+html[data-theme="neo"] .project-summary,
+html[data-theme="neo"] .project-section-heading p,
+html[data-theme="neo"] .explain-card p { color: var(--ink); }
+html[data-theme="neo"] .hero-summary { max-width: 36rem; font-size: 1.1rem; font-weight: 700; }
+html[data-theme="neo"] .hero-facts { border-top: 3px solid var(--ink); }
+html[data-theme="neo"] .hero-facts div { padding: 1rem 0; border-bottom: 3px solid var(--ink); }
+html[data-theme="neo"] .hero-facts dt { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .hero-facts dd { font-weight: 800; }
+html[data-theme="neo"] .projects-section { padding-top: 2rem; }
+html[data-theme="neo"] .section-heading,
+html[data-theme="neo"] .split-section,
+html[data-theme="neo"] .contact-section { gap: 4rem; }
+html[data-theme="neo"] .section-heading { padding-top: 1.25rem; border-top: 4px solid var(--ink); }
+html[data-theme="neo"] .section-note { padding: 1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 5px 5px 0 var(--ink); font-weight: 700; }
+html[data-theme="neo"] .project-index { gap: 1.5rem; }
+html[data-theme="neo"] .index-card { min-height: 330px; padding: 1.5rem; border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); transition: transform .16s ease, box-shadow .16s ease; }
+html[data-theme="neo"] .index-card:hover { transform: translate(-5px, -5px); box-shadow: 13px 13px 0 var(--ink); }
+html[data-theme="neo"] .index-card-blue { background: var(--blue); }
+html[data-theme="neo"] .index-card-lilac { background: var(--lilac); }
+html[data-theme="neo"] .index-card-orange { background: var(--orange); }
+html[data-theme="neo"] .index-card-cream { background: var(--cream); }
+html[data-theme="neo"] .index-card-neutral { background: var(--acid); }
+html[data-theme="neo"] .card-index { top: 1.2rem; right: 1.2rem; padding: .3rem .45rem; border: 2px solid var(--ink); background: #ffffff; color: var(--ink); font-weight: 800; }
+html[data-theme="neo"] .card-type { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .index-card h3 { font-size: clamp(2.2rem, 4vw, 4rem); }
+html[data-theme="neo"] .index-card p { font-weight: 700; }
+html[data-theme="neo"] .card-link { border-top: 3px solid var(--ink); font-weight: 900; }
+html[data-theme="neo"] .split-section,
+html[data-theme="neo"] .contact-section { border-top: 4px solid var(--ink); }
+html[data-theme="neo"] .text-columns p { padding: 1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 5px 5px 0 var(--ink); font-weight: 700; }
+html[data-theme="neo"] .contact-links a { border: 3px solid var(--ink); margin-bottom: .65rem; padding: .8rem 1rem; background: var(--pink); box-shadow: 4px 4px 0 var(--ink); font-weight: 900; }
+html[data-theme="neo"] .contact-links a:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink); }
+html[data-theme="neo"] .contact-links span { color: var(--ink); }
+html[data-theme="neo"] .site-footer { padding: 1.25rem 0 2rem; border-top: 4px solid var(--ink); color: var(--ink); font-weight: 800; }
+html[data-theme="neo"] .header-tools { display: flex; align-items: center; gap: 1rem; }
+html[data-theme="neo"] .look-switcher { display: flex; align-items: center; gap: .45rem; color: var(--ink); font: 700 .64rem/1 var(--mono); text-transform: uppercase; }
+html[data-theme="neo"] .look-switcher select { min-width: 9.5rem; padding: .35rem .45rem; border: 2px solid var(--ink); background: var(--cream); color: var(--ink); font: 700 .64rem/1 var(--mono); }
+html[data-theme="neo"] .index-card h3 { font-family: var(--sans); }
+html[data-theme="neo"] .hero-portrait { width: min(100%, 320px); margin: 0 0 0 auto; border: 4px solid var(--ink); background: var(--acid); box-shadow: 10px 10px 0 var(--ink); }
+html[data-theme="neo"] .hero-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+html[data-theme="neo"] .hero-portrait figcaption { padding: .7rem .8rem; border-top: 3px solid var(--ink); font: 700 .7rem/1.2 var(--mono); text-transform: uppercase; }
+html[data-theme="neo"] .about-section { padding: 3rem 0 5rem; border-top: 4px solid var(--ink); }
+html[data-theme="neo"] .about-heading { display: block; margin-bottom: 2rem; padding-top: 0; border-top: 0; }
+html[data-theme="neo"] .about-copy { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; max-width: 940px; }
+html[data-theme="neo"] .about-card { min-height: 220px; padding: 1.25rem; border: 3px solid var(--ink); box-shadow: 7px 7px 0 var(--ink); }
+html[data-theme="neo"] .about-card-blue { background: var(--blue); }
+html[data-theme="neo"] .about-card-pink { background: var(--pink); }
+html[data-theme="neo"] .about-card-label { display: inline-block; margin-bottom: 2rem; padding: .35rem .5rem; border: 2px solid var(--ink); background: var(--ink); color: var(--cream); font: 700 .68rem/1 var(--mono); text-transform: uppercase; }
+html[data-theme="neo"] .about-card p { margin: 0; max-width: 28rem; font-size: 1.08rem; font-weight: 800; line-height: 1.45; }
+html[data-theme="neo"] .projects-heading { grid-template-columns: 1fr; }
+html[data-theme="neo"] .card-actions { display: flex; align-items: center; gap: .75rem; margin-top: 1.5rem; padding-top: .85rem; border-top: 3px solid var(--ink); }
+html[data-theme="neo"] .card-link { flex: 1; padding-top: 0; border-top: 0; }
+html[data-theme="neo"] .card-git { padding: .4rem .55rem; border: 2px solid var(--ink); background: #ffffff; font: 700 .64rem/1 var(--mono); }
+html[data-theme="neo"] .card-link:hover { text-decoration: underline; }
+html[data-theme="neo"] .card-git:hover { background: var(--pink); color: var(--ink); transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); }
+html[data-theme="neo"] .index-card[role="link"] { cursor: pointer; }
+html[data-theme="neo"] .index-card[role="link"]:focus-visible { outline: 4px solid var(--pink); outline-offset: 5px; }
+html[data-theme="neo"] .contact-section { display: block; }
+html[data-theme="neo"] .contact-section > div:first-child { margin-bottom: 2rem; }
+html[data-theme="neo"] .contact-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
+html[data-theme="neo"] .contact-links a { width: auto; min-height: 72px; margin: 0; }
+
+@media (max-width: 760px) {
+  html[data-theme="neo"] .hero-portrait { width: min(100%, 280px); margin: 0; }
+  html[data-theme="neo"] .about-copy { grid-template-columns: 1fr; }
+  html[data-theme="neo"] .about-copy p:first-child { grid-column: auto; }
+  html[data-theme="neo"] .contact-links { grid-template-columns: 1fr; }
+}
+
+/* Project pages and widgets stay in the Neo module, not shared styles. */
+html[data-theme="neo"] .project-main { padding-top: 2.5rem; }
+html[data-theme="neo"] .project-nav { padding: .85rem 1rem; border: 3px solid var(--ink); background: var(--acid); color: var(--ink); font-weight: 800; box-shadow: 5px 5px 0 var(--ink); }
+html[data-theme="neo"] .project-nav a:hover { color: var(--ink); text-decoration: underline; }
+html[data-theme="neo"] .project-header { position: relative; margin-top: 3rem; padding: 3rem; border: 4px solid var(--ink); background: var(--blue); box-shadow: 12px 12px 0 var(--ink); }
+html[data-theme="neo"] .project-header h1 { margin-bottom: 1.1rem; font-size: clamp(4rem, 9vw, 8rem); }
+html[data-theme="neo"] .project-summary { font-weight: 700; }
+html[data-theme="neo"] .project-facts { border-top: 3px solid var(--ink); }
+html[data-theme="neo"] .project-facts div { padding: 1rem 0; border-bottom: 3px solid var(--ink); }
+html[data-theme="neo"] .project-facts dt { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .project-facts dd { font-weight: 800; }
+html[data-theme="neo"] .project-section { padding: 3rem 0 5rem; border-top: 4px solid var(--ink); }
+html[data-theme="neo"] .project-section-heading { margin-bottom: 2rem; }
+html[data-theme="neo"] .project-section-heading h2 { font-weight: 900; }
+html[data-theme="neo"] .project-section-heading p { font-weight: 700; }
+html[data-theme="neo"] .explain-grid { gap: 1rem; }
+html[data-theme="neo"] .explain-card { min-height: 190px; padding: 1.1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 6px 6px 0 var(--ink); }
+html[data-theme="neo"] .explain-card .section-label { margin: -1.1rem -1.1rem 1.25rem; }
+html[data-theme="neo"] .explain-card h3 { margin-bottom: .7rem; font-size: 1.55rem; letter-spacing: -.06em; }
+html[data-theme="neo"] .explain-card p { font-weight: 600; }
+html[data-theme="neo"] .flow-map { gap: .9rem; padding: .3rem 0 1rem; }
+html[data-theme="neo"] .flow-node { min-height: 135px; padding: 1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 5px 5px 0 var(--ink); }
+html[data-theme="neo"] .flow-node > span { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .flow-node strong { font-family: var(--sans); font-weight: 900; letter-spacing: -.05em; }
+html[data-theme="neo"] .flow-node small { color: var(--muted); font-weight: 700; }
+html[data-theme="neo"] .flow-arrow { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .site-footer.project-footer { margin-top: 0; }
+html[data-theme="neo"] .project-button { border: 3px solid var(--ink); background: var(--pink); color: var(--ink); box-shadow: 5px 5px 0 var(--ink); font-family: var(--mono); font-weight: 800; }
+html[data-theme="neo"] .project-button:hover { background: var(--acid); color: var(--ink); transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }
+
+html[data-theme="neo"] .widget-shell { margin-top: 2rem; padding: 1.25rem; border: 4px solid var(--ink); background: #ffffff; box-shadow: 8px 8px 0 var(--ink); }
+html[data-theme="neo"] .widget-toolbar,
+html[data-theme="neo"] .phase-toolbar { padding-bottom: 1rem; border-bottom: 3px solid var(--ink); }
+html[data-theme="neo"] .control label,
+html[data-theme="neo"] .control output,
+html[data-theme="neo"] .phase-route span,
+html[data-theme="neo"] .phase-source { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] select,
+html[data-theme="neo"] button { border: 3px solid var(--ink); background: var(--cream); color: var(--ink); box-shadow: 4px 4px 0 var(--ink); font-weight: 800; }
+html[data-theme="neo"] select:hover,
+html[data-theme="neo"] button:hover { background: var(--pink); color: var(--ink); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+html[data-theme="neo"] .range-row input { accent-color: var(--pink); }
+html[data-theme="neo"] .widget-status { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .widget-grid { gap: 1rem; }
+html[data-theme="neo"] .widget-card { padding: 1rem; border: 3px solid var(--ink); background: var(--acid); box-shadow: 4px 4px 0 var(--ink); }
+html[data-theme="neo"] .widget-card strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .widget-card span { color: var(--ink); font-weight: 700; }
+html[data-theme="neo"] .visual-svg { border: 4px solid var(--ink); background: #071018; }
+html[data-theme="neo"] .svg-wall { stroke: #ffffff; }
+html[data-theme="neo"] .svg-player { fill: var(--blue); }
+html[data-theme="neo"] .svg-enemy { fill: var(--pink); }
+html[data-theme="neo"] .svg-sensor { fill: var(--cream); }
+html[data-theme="neo"] .svg-vision { fill: rgba(141,231,255,.28); stroke: var(--blue); }
+html[data-theme="neo"] .svg-smoke { fill: rgba(255,255,255,.3); }
+html[data-theme="neo"] .pipeline { gap: .75rem; }
+html[data-theme="neo"] .pipeline-step { border: 3px solid var(--ink); background: #ffffff; box-shadow: 4px 4px 0 var(--ink); }
+html[data-theme="neo"] .pipeline-step.is-active { border-color: var(--ink); background: var(--blue); }
+html[data-theme="neo"] .pipeline-step span { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .pipeline-step strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .code-preview { border: 3px solid var(--ink); background: var(--ink); color: var(--acid); }
+html[data-theme="neo"] .timeline-item { border-top: 3px solid var(--ink); }
+html[data-theme="neo"] .timeline-item::before { background: var(--ink); }
+html[data-theme="neo"] .timeline-item.is-active { border-color: var(--ink); }
+html[data-theme="neo"] .timeline-item.is-active::before { background: var(--pink); }
+html[data-theme="neo"] .timeline-item strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .timeline-item span { color: var(--ink); font-weight: 700; }
+html[data-theme="neo"] .event-row { border: 3px solid var(--ink); background: var(--cream); font-weight: 700; }
+html[data-theme="neo"] .event-row time { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .pump-bar { height: .55rem; background: var(--ink); }
+html[data-theme="neo"] .pump-bar i { background: var(--pink); }
+html[data-theme="neo"] .screenshot-grid { gap: 1.25rem; }
+html[data-theme="neo"] .screenshot-card { border: 4px solid var(--ink); background: #ffffff; box-shadow: 7px 7px 0 var(--ink); }
+html[data-theme="neo"] .screenshot-frame { background: var(--acid); border-bottom: 3px solid var(--ink); }
+html[data-theme="neo"] .screenshot-card figcaption { padding: 1rem; }
+html[data-theme="neo"] .screenshot-card figcaption strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .screenshot-card figcaption span { color: var(--ink); font-weight: 600; }
+html[data-theme="neo"] .phase-tabs { gap: .75rem; }
+html[data-theme="neo"] .phase-tab { border: 3px solid var(--ink); background: #ffffff; box-shadow: 4px 4px 0 var(--ink); }
+html[data-theme="neo"] .phase-tab:hover,
+html[data-theme="neo"] .phase-tab.is-active { border-color: var(--ink); background: var(--pink); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+html[data-theme="neo"] .phase-tab span { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .phase-tab strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .phase-detail { border: 3px solid var(--ink); background: var(--acid); }
+html[data-theme="neo"] .phase-route div { border: 3px solid var(--ink); background: #ffffff; }
+html[data-theme="neo"] .phase-route .phase-output { border-color: var(--ink); background: var(--blue); }
+html[data-theme="neo"] .phase-route strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .phase-route b { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .phase-copy { color: var(--ink); font-weight: 700; }
+html[data-theme="neo"] .meantime-step { border: 3px solid var(--ink); background: #ffffff; box-shadow: 4px 4px 0 var(--ink); }
+html[data-theme="neo"] .meantime-step small,
+html[data-theme="neo"] .lane-label { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .meantime-step strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .meantime-step span { color: var(--ink); font-weight: 600; }
+html[data-theme="neo"] .contract-lane .meantime-step { border-color: var(--ink); background: var(--orange); }
+html[data-theme="neo"] .meantime-note { border-top: 3px solid var(--ink); }
+html[data-theme="neo"] .meantime-note strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .meantime-note span { color: var(--ink); font-weight: 600; }
+html[data-theme="neo"] .fortdb-diagram { padding: 1.25rem; border: 4px solid var(--ink); background: var(--cream); box-shadow: 6px 6px 0 var(--ink); }
+html[data-theme="neo"] .diagram-heading span { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .diagram-heading h3 { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .fortdb-diagram > p { color: var(--ink); font-weight: 600; }
+html[data-theme="neo"] .tree-line strong,
+html[data-theme="neo"] .write-path > div,
+html[data-theme="neo"] .version-root,
+html[data-theme="neo"] .version-map { border: 3px solid var(--ink); background: #ffffff; box-shadow: 3px 3px 0 var(--ink); }
+html[data-theme="neo"] .tree-line strong:last-child,
+html[data-theme="neo"] .write-path > div:last-child { border-color: var(--ink); background: var(--blue); }
+html[data-theme="neo"] .tree-line i,
+html[data-theme="neo"] .write-path > i,
+html[data-theme="neo"] .version-diagram > i { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .tree-branches div { border-top: 3px solid var(--ink); }
+html[data-theme="neo"] .tree-branches b,
+html[data-theme="neo"] .version-root strong,
+html[data-theme="neo"] .version-chain b,
+html[data-theme="neo"] .write-path strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .tree-branches span,
+html[data-theme="neo"] .version-map > span,
+html[data-theme="neo"] .version-chain span,
+html[data-theme="neo"] .write-path small { color: var(--ink); font-weight: 700; }
+html[data-theme="neo"] .version-chain div { border: 3px solid var(--ink); background: var(--pink); }
+html[data-theme="neo"] .architecture-node { border: 3px solid var(--ink); background: #ffffff; box-shadow: 4px 4px 0 var(--ink); }
+html[data-theme="neo"] .architecture-node.is-accent { border-color: var(--ink); background: var(--blue); }
+html[data-theme="neo"] .architecture-node small,
+html[data-theme="neo"] .context-band small { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .architecture-node strong,
+html[data-theme="neo"] .context-band strong { font-family: var(--sans); font-weight: 900; }
+html[data-theme="neo"] .architecture-node span,
+html[data-theme="neo"] .architecture-caption { color: var(--ink); font-weight: 600; }
+html[data-theme="neo"] .architecture-row > b { color: var(--ink); font-weight: 900; }
+html[data-theme="neo"] .context-band { border: 3px solid var(--ink); background: var(--orange); }
+html[data-theme="neo"] .context-band > span { color: var(--ink); font-weight: 800; }
+html[data-theme="neo"] .context-band > b { color: var(--ink); font-weight: 900; }
+
+@media (max-width: 760px) {
+  html[data-theme="neo"] .project-header { padding: 2rem 1.25rem; box-shadow: 7px 7px 0 var(--ink); }
+  html[data-theme="neo"] .project-section { padding-bottom: 4rem; }
+  html[data-theme="neo"] .explain-card { box-shadow: 4px 4px 0 var(--ink); }
+  html[data-theme="neo"] .widget-shell { box-shadow: 5px 5px 0 var(--ink); }
+  html[data-theme="neo"] .screenshot-card,
+  html[data-theme="neo"] .fortdb-diagram { box-shadow: 4px 4px 0 var(--ink); }
+}

@@ -1,0 +1,157 @@
+/* Assault on the eyes: intentionally loud, clashing, over-decorated, and deeply unhelpful. */
+html[data-theme="eyesore"] {
+  --ink: #000000;
+  --muted: #ff00ff;
+  --paper: #00ff00;
+  --line: #ff0000;
+  --blue: #00ffff;
+  --blue-ink: #ff00ff;
+  --lilac: #ffff00;
+  --orange: #ff6600;
+  --orange-ink: #0000ff;
+  --cream: #ff00ff;
+  --acid: #00ffff;
+  --pink: #ffff00;
+  --serif: "Comic Sans MS", "Comic Sans", cursive;
+  --sans: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --mono: "Courier New", monospace;
+}
+
+html[data-theme="eyesore"] body {
+  background-color: #ff00ff;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,0,.9) 0 6px, transparent 6px 12px),
+    repeating-linear-gradient(90deg, rgba(0,255,255,.75) 0 5px, transparent 5px 15px),
+    radial-gradient(circle, #00ff00 0 2px, #ff0000 2px 5px, transparent 5px);
+  background-size: auto, auto, 31px 29px;
+  color: #000000;
+  font-family: var(--serif);
+  font-weight: 700;
+}
+
+html[data-theme="eyesore"] a { color: #0000ff; text-decoration: underline wavy #ff0000 2px; }
+html[data-theme="eyesore"] a:visited { color: #800080; }
+html[data-theme="eyesore"] a:hover { background: #ffff00; color: #ff0000; }
+
+html[data-theme="eyesore"] .site-header,
+html[data-theme="eyesore"] .home-hero,
+html[data-theme="eyesore"] .project-header,
+html[data-theme="eyesore"] .about-card,
+html[data-theme="eyesore"] .index-card,
+html[data-theme="eyesore"] .contact-links a,
+html[data-theme="eyesore"] .widget-shell,
+html[data-theme="eyesore"] .explain-card,
+html[data-theme="eyesore"] .screenshot-card,
+html[data-theme="eyesore"] .fortdb-diagram,
+html[data-theme="eyesore"] .fortdb-flow-card,
+html[data-theme="eyesore"] .widget-card,
+html[data-theme="eyesore"] .pipeline-step,
+html[data-theme="eyesore"] .phase-tab,
+html[data-theme="eyesore"] .flow-node,
+html[data-theme="eyesore"] .meantime-step,
+html[data-theme="eyesore"] .architecture-node,
+html[data-theme="eyesore"] .fortdb-flow-node {
+  border: 7px dotted #ff0000;
+  border-radius: 0 35px 0 35px;
+  box-shadow: 13px 13px 0 #0000ff, -8px -8px 0 #00ff00;
+}
+
+html[data-theme="eyesore"] .site-header {
+  background: repeating-linear-gradient(45deg, #ffff00 0 12px, #ff00ff 12px 24px);
+  color: #0000ff;
+  font-family: var(--sans);
+  text-shadow: 3px 3px #00ffff;
+}
+html[data-theme="eyesore"] .site-header nav { gap: 1rem; }
+html[data-theme="eyesore"] .site-header nav a,
+html[data-theme="eyesore"] .look-switcher,
+html[data-theme="eyesore"] .header-meta { color: #ff0000; font-family: var(--sans); }
+html[data-theme="eyesore"] .wordmark { transform: skew(-8deg) rotate(2deg); }
+html[data-theme="eyesore"] .wordmark-mark {
+  border: 6px double #0000ff;
+  border-radius: 50%;
+  background: #ff0000;
+  color: #ffff00;
+  box-shadow: 6px 6px #00ff00;
+}
+html[data-theme="eyesore"] .header-meta { border: 5px ridge #00ff00; background: #00ffff; padding: .5rem; }
+html[data-theme="eyesore"] .look-switcher select,
+html[data-theme="eyesore"] button,
+html[data-theme="eyesore"] input,
+html[data-theme="eyesore"] select { border: 6px groove #ff0000; border-radius: 0; background: #ffff00; color: #0000ff; font: 900 .75rem var(--sans); }
+
+html[data-theme="eyesore"] .home-hero,
+html[data-theme="eyesore"] .project-header { background: repeating-conic-gradient(#00ffff 0 12deg, #ff00ff 12deg 24deg, #ffff00 24deg 36deg); }
+html[data-theme="eyesore"] .home-hero::before,
+html[data-theme="eyesore"] .project-header::before { background: #ff0000; color: #ffff00; font-family: var(--sans); letter-spacing: .15em; }
+html[data-theme="eyesore"] h1,
+html[data-theme="eyesore"] h2,
+html[data-theme="eyesore"] h3 { color: #ff0000; font-family: var(--sans); letter-spacing: .05em; text-shadow: 5px 5px #00ffff, -3px -3px #ffff00; text-transform: uppercase; }
+html[data-theme="eyesore"] h1 { transform: skew(5deg) rotate(-2deg); }
+html[data-theme="eyesore"] h2 { text-decoration: overline underline wavy #0000ff 4px; }
+html[data-theme="eyesore"] .hero-summary,
+html[data-theme="eyesore"] .project-summary,
+html[data-theme="eyesore"] .project-section-heading p,
+html[data-theme="eyesore"] .explain-card p { color: #0000ff; }
+html[data-theme="eyesore"] .section-label,
+html[data-theme="eyesore"] .about-card-label,
+html[data-theme="eyesore"] .card-index {
+  border: 5px groove #00ff00;
+  border-radius: 0;
+  background: #ff0000;
+  color: #ffff00;
+  font-family: var(--sans);
+  transform: rotate(3deg);
+}
+html[data-theme="eyesore"] .section-label::before { background: #00ffff; box-shadow: 0 0 0 5px #0000ff; }
+html[data-theme="eyesore"] .hero-portrait { border: 9px double #0000ff; border-radius: 0 40px 0 40px; background: #00ff00; box-shadow: 14px 14px #ff0000; transform: rotate(-3deg); }
+html[data-theme="eyesore"] .hero-portrait img { filter: saturate(3) contrast(1.4) hue-rotate(70deg); }
+html[data-theme="eyesore"] .hero-portrait figcaption { border-top: 7px dotted #ff00ff; background: #ffff00; color: #ff0000; font-family: var(--sans); }
+
+html[data-theme="eyesore"] .about-card-blue,
+html[data-theme="eyesore"] .index-card-blue { background: #00ffff; }
+html[data-theme="eyesore"] .about-card-pink,
+html[data-theme="eyesore"] .index-card-lilac { background: #ff00ff; }
+html[data-theme="eyesore"] .index-card-orange { background: #ff6600; }
+html[data-theme="eyesore"] .index-card-cream,
+html[data-theme="eyesore"] .index-card-neutral { background: #ffff00; }
+html[data-theme="eyesore"] .about-card p,
+html[data-theme="eyesore"] .index-card p,
+html[data-theme="eyesore"] .card-type,
+html[data-theme="eyesore"] .card-index { color: #0000ff; }
+html[data-theme="eyesore"] .card-actions { border-top: 7px double #ff0000; }
+html[data-theme="eyesore"] .card-link { color: #ff0000; font-family: var(--sans); }
+html[data-theme="eyesore"] .card-git,
+html[data-theme="eyesore"] .project-button { border: 6px ridge #00ff00; background: #0000ff; color: #ffff00; font-family: var(--sans); }
+html[data-theme="eyesore"] .contact-links a { background: #00ffff; color: #ff0000; font-family: var(--sans); }
+html[data-theme="eyesore"] .contact-links a:nth-child(2) { background: #ffff00; }
+html[data-theme="eyesore"] .contact-links a:nth-child(3) { background: #ff00ff; }
+html[data-theme="eyesore"] .site-footer { border-top: 9px double #ff0000; background: #00ff00; color: #ff0000; font-family: var(--sans); }
+
+html[data-theme="eyesore"] .project-nav { border: 7px dotted #0000ff; background: #ffff00; color: #ff0000; }
+html[data-theme="eyesore"] .widget-shell { background: #ff00ff; }
+html[data-theme="eyesore"] .widget-card,
+html[data-theme="eyesore"] .pipeline-step,
+html[data-theme="eyesore"] .phase-tab,
+html[data-theme="eyesore"] .flow-node,
+html[data-theme="eyesore"] .meantime-step,
+html[data-theme="eyesore"] .architecture-node,
+html[data-theme="eyesore"] .fortdb-flow-node { background: #00ffff; }
+html[data-theme="eyesore"] .visual-svg,
+html[data-theme="eyesore"] .code-preview { border: 8px groove #00ff00; background: #000000; color: #00ff00; }
+html[data-theme="eyesore"] .phase-tab.is-active,
+html[data-theme="eyesore"] .pipeline-step.is-active { background: #ff0000; color: #ffff00; }
+
+@keyframes eyesore-wobble { 0%, 100% { transform: rotate(-1deg) skew(1deg); } 50% { transform: rotate(1deg) skew(-1deg); } }
+@keyframes eyesore-rainbow { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(360deg); } }
+html[data-theme="eyesore"] .index-card,
+html[data-theme="eyesore"] .about-card { animation: eyesore-wobble 3.7s ease-in-out infinite; }
+html[data-theme="eyesore"] .wordmark-mark,
+html[data-theme="eyesore"] .hero-portrait { animation: eyesore-rainbow 7s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="eyesore"] .index-card,
+  html[data-theme="eyesore"] .about-card,
+  html[data-theme="eyesore"] .wordmark-mark,
+  html[data-theme="eyesore"] .hero-portrait { animation: none; }
+}

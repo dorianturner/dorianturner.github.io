@@ -7,17 +7,6 @@
 .site-footer.project-footer { margin-top: 0; }
 @media (max-width: 760px) { .project-header, .project-section-heading { grid-template-columns: 1fr; gap: 2rem; }.project-header { padding: 3.5rem 0; }.explain-grid { grid-template-columns: 1fr; }.project-section { padding-bottom: 4rem; }.flow-map { display: grid; grid-template-columns: 1fr; overflow: visible; }.flow-node { min-width: 0; min-height: 90px; }.flow-arrow { transform: rotate(90deg); justify-self: center; } }
 
-/* Neo-brutalist project pages */
-.project-main { padding-top: 2.5rem; }
-.project-nav { padding: .85rem 1rem; border: 3px solid var(--ink); background: var(--acid); color: var(--ink); font-weight: 800; box-shadow: 5px 5px 0 var(--ink); }.project-nav a:hover { color: var(--ink); text-decoration: underline; }
-.project-header { position: relative; margin-top: 3rem; padding: 3rem; border: 4px solid var(--ink); background: var(--blue); box-shadow: 12px 12px 0 var(--ink); }.project-header h1 { margin-bottom: 1.1rem; font-size: clamp(4rem, 9vw, 8rem); }.project-summary { font-weight: 700; }.project-facts { border-top: 3px solid var(--ink); }.project-facts div { padding: 1rem 0; border-bottom: 3px solid var(--ink); }.project-facts dt { color: var(--ink); font-weight: 900; }.project-facts dd { font-weight: 800; }
-.project-section { padding: 3rem 0 5rem; border-top: 4px solid var(--ink); }.project-section-heading { margin-bottom: 2rem; }.project-section-heading h2 { font-weight: 900; }.project-section-heading p { font-weight: 700; }.explain-grid { gap: 1rem; }.explain-card { min-height: 190px; padding: 1.1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 6px 6px 0 var(--ink); }.explain-card .section-label { margin: -1.1rem -1.1rem 1.25rem; }.explain-card h3 { margin-bottom: .7rem; font-size: 1.55rem; letter-spacing: -.06em; }.explain-card p { font-weight: 600; }
-.flow-map { gap: .9rem; padding: .3rem 0 1rem; }.flow-node { min-height: 135px; padding: 1rem; border: 3px solid var(--ink); background: #ffffff; box-shadow: 5px 5px 0 var(--ink); }.flow-node > span { color: var(--ink); font-weight: 900; }.flow-node strong { font-family: var(--sans); font-weight: 900; letter-spacing: -.05em; }.flow-node small { color: var(--muted); font-weight: 700; }.flow-arrow { color: var(--ink); font-weight: 900; }
-.site-footer.project-footer { margin-top: 0; }
-@media (max-width: 760px) { .project-header { padding: 2rem 1.25rem; box-shadow: 7px 7px 0 var(--ink); }.project-section { padding-bottom: 4rem; }.explain-card { box-shadow: 4px 4px 0 var(--ink); } }
-
 .explain-card h3 { font-family: var(--sans); }
 .project-section-heading.is-solo { grid-template-columns: 1fr; }
 .project-links { display: flex; margin-top: 1.5rem; }
-.project-button { border: 3px solid var(--ink); background: var(--pink); color: var(--ink); box-shadow: 5px 5px 0 var(--ink); font-family: var(--mono); font-weight: 800; }
-.project-button:hover { background: var(--acid); color: var(--ink); transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }

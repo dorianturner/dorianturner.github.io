@@ -1,0 +1,311 @@
+/* Old-school monochrome desktop GUI look. */
+html[data-theme="mono"] {
+  --ink: #111111;
+  --muted: #444444;
+  --paper: #808080;
+  --line: #000000;
+  --blue: #c0c0c0;
+  --blue-ink: #000000;
+  --lilac: #d4d0c8;
+  --orange: #d4d0c8;
+  --orange-ink: #000000;
+  --cream: #ffffff;
+  --acid: #d4d0c8;
+  --pink: #ffffff;
+  --gui: "DM Mono", "Courier New", monospace;
+}
+
+html[data-theme="mono"] body {
+  background-color: #808080;
+  background-image: linear-gradient(45deg, #858585 25%, transparent 25%), linear-gradient(-45deg, #858585 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #858585 75%), linear-gradient(-45deg, transparent 75%, #858585 75%);
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0;
+  background-size: 8px 8px;
+  color: var(--ink);
+  font-family: var(--gui);
+  font-size: 14px;
+}
+html[data-theme="mono"] body::before,
+html[data-theme="mono"] body::after { display: none; }
+html[data-theme="mono"] a { color: var(--ink); }
+html[data-theme="mono"] a:focus-visible,
+html[data-theme="mono"] button:focus-visible,
+html[data-theme="mono"] input:focus-visible,
+html[data-theme="mono"] select:focus-visible { outline: 2px dotted #000; outline-offset: 3px; }
+html[data-theme="mono"] .site-header,
+html[data-theme="mono"] main,
+html[data-theme="mono"] .site-footer { width: min(1180px, calc(100% - 48px)); }
+
+html[data-theme="mono"] .site-header {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;
+  padding: 2.4rem .75rem .7rem;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow: 3px 3px #000000;
+  color: #000;
+}
+html[data-theme="mono"] .site-header::before,
+html[data-theme="mono"] .project-header::before,
+html[data-theme="mono"] .widget-shell::before {
+  position: absolute;
+  top: .35rem;
+  right: .35rem;
+  left: .35rem;
+  height: 1.35rem;
+  padding: .2rem .4rem;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+  content: "DORIAN_TURNER.EXE";
+  font: .65rem/1 var(--gui);
+  letter-spacing: .04em;
+}
+html[data-theme="mono"] .wordmark { font-family: var(--gui); font-size: .75rem; font-weight: 700; text-transform: uppercase; }
+html[data-theme="mono"] .wordmark-mark {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px inset #ffffff;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  font-family: var(--gui);
+  font-size: .65rem;
+  box-shadow: none;
+}
+html[data-theme="mono"] nav { gap: .15rem; color: #000; }
+html[data-theme="mono"] nav a { padding: .35rem .5rem; border: 0; font-family: var(--gui); font-size: .68rem; text-decoration: underline; text-transform: uppercase; }
+html[data-theme="mono"] nav a:hover { background: #000; color: #fff; }
+html[data-theme="mono"] .header-meta {
+  padding: .35rem .5rem;
+  border: 2px inset #ffffff;
+  border-radius: 0;
+  background: #d4d0c8;
+  color: #000;
+  font: .6rem var(--gui);
+}
+html[data-theme="mono"] .header-tools { gap: .6rem; }
+html[data-theme="mono"] .look-switcher { color: #000; font: .6rem var(--gui); text-transform: uppercase; }
+html[data-theme="mono"] .look-switcher select {
+  min-width: 10rem;
+  padding: .3rem .4rem;
+  border: 2px inset #ffffff;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000;
+  font: .63rem var(--gui);
+}
+
+html[data-theme="mono"] main { padding-top: 3.5rem; }
+html[data-theme="mono"] h1,
+html[data-theme="mono"] h2,
+html[data-theme="mono"] h3 { color: #000; font-family: var(--gui); font-weight: 700; letter-spacing: -.06em; text-shadow: none; }
+html[data-theme="mono"] h1 { font-size: clamp(3.4rem, 8vw, 8rem); line-height: .84; }
+html[data-theme="mono"] h2 { font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: .9; }
+html[data-theme="mono"] h3 { font-size: clamp(1.8rem, 3.5vw, 3.3rem); line-height: .95; }
+html[data-theme="mono"] .section-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: .3rem .5rem;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  font: .62rem var(--gui);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+html[data-theme="mono"] .section-label::before { content: "["; color: #fff; }
+html[data-theme="mono"] .section-label::after { content: "]"; color: #fff; }
+html[data-theme="mono"] .hero-summary,
+html[data-theme="mono"] .section-note,
+html[data-theme="mono"] .text-columns,
+html[data-theme="mono"] .contact-links,
+html[data-theme="mono"] .project-summary,
+html[data-theme="mono"] .project-section-heading p,
+html[data-theme="mono"] .explain-card p { color: #222; }
+
+html[data-theme="mono"] .home-hero {
+  position: relative;
+  min-height: 490px;
+  padding: 4.5rem 2.5rem 2.5rem;
+  overflow: hidden;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #d4d0c8;
+  box-shadow: 6px 6px #000;
+}
+html[data-theme="mono"] .home-hero::before {
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  left: .4rem;
+  height: 1.45rem;
+  background: #000;
+  color: #fff;
+  content: "WELCOME_TO_DORIAN'S_DESKTOP";
+  font: .66rem/1.45rem var(--gui);
+  letter-spacing: .04em;
+  text-indent: .4rem;
+}
+html[data-theme="mono"] .home-hero::after {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 12rem;
+  height: 12rem;
+  border: 2px dotted #666;
+  border-radius: 50%;
+  content: "";
+  opacity: .5;
+  pointer-events: none;
+}
+html[data-theme="mono"] .hero-portrait {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 285px);
+  margin: 0 0 0 auto;
+  padding: .4rem;
+  border: 2px inset #ffffff;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow: 3px 3px #000;
+}
+html[data-theme="mono"] .hero-portrait img { aspect-ratio: 4 / 5; filter: grayscale(1) contrast(1.2); }
+html[data-theme="mono"] .hero-portrait figcaption { padding: .5rem .3rem .15rem; border-top: 1px solid #000; color: #000; font: .6rem var(--gui); text-align: center; text-transform: uppercase; }
+
+html[data-theme="mono"] .about-section,
+html[data-theme="mono"] .split-section,
+html[data-theme="mono"] .contact-section,
+html[data-theme="mono"] .project-section { border-top: 2px solid #000; }
+html[data-theme="mono"] .section-heading { border-top: 2px solid #000; }
+html[data-theme="mono"] .section-note,
+html[data-theme="mono"] .about-card,
+html[data-theme="mono"] .index-card,
+html[data-theme="mono"] .text-columns p,
+html[data-theme="mono"] .contact-links a,
+html[data-theme="mono"] .explain-card,
+html[data-theme="mono"] .flow-node,
+html[data-theme="mono"] .widget-shell,
+html[data-theme="mono"] .widget-card,
+html[data-theme="mono"] .screenshot-card,
+html[data-theme="mono"] .fortdb-diagram,
+html[data-theme="mono"] .architecture-node,
+html[data-theme="mono"] .meantime-step,
+html[data-theme="mono"] .pipeline-step,
+html[data-theme="mono"] .phase-tab,
+html[data-theme="mono"] .fortdb-flow-card,
+html[data-theme="mono"] .fortdb-flow-node {
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow: 4px 4px #000;
+}
+html[data-theme="mono"] .about-card-blue,
+html[data-theme="mono"] .about-card-pink,
+html[data-theme="mono"] .index-card-blue,
+html[data-theme="mono"] .index-card-lilac,
+html[data-theme="mono"] .index-card-orange,
+html[data-theme="mono"] .index-card-cream,
+html[data-theme="mono"] .index-card-neutral,
+html[data-theme="mono"] .fortdb-flow-card:nth-child(2),
+html[data-theme="mono"] .fortdb-flow-card:nth-child(3),
+html[data-theme="mono"] .fortdb-flow-card:nth-child(4) { background: #c0c0c0; }
+html[data-theme="mono"] .about-card:hover,
+html[data-theme="mono"] .index-card:hover,
+html[data-theme="mono"] .phase-tab:hover,
+html[data-theme="mono"] .phase-tab.is-active { border-style: inset; box-shadow: 2px 2px #000; transform: translate(2px, 2px); }
+html[data-theme="mono"] .card-index,
+html[data-theme="mono"] .card-type { color: #333; font-family: var(--gui); }
+html[data-theme="mono"] .index-card h3 { color: #000; }
+html[data-theme="mono"] .index-card p { color: #222; }
+html[data-theme="mono"] .card-actions { border-top: 1px solid #000; }
+html[data-theme="mono"] .card-link { color: #000; font-family: var(--gui); text-decoration: underline; }
+html[data-theme="mono"] .card-git,
+html[data-theme="mono"] .project-button,
+html[data-theme="mono"] select,
+html[data-theme="mono"] button {
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #d4d0c8;
+  color: #000;
+  box-shadow: 2px 2px #000;
+  font-family: var(--gui);
+}
+html[data-theme="mono"] .card-git:hover,
+html[data-theme="mono"] .project-button:hover,
+html[data-theme="mono"] button:hover { border-style: inset; background: #ffffff; color: #000; transform: translate(2px, 2px); }
+html[data-theme="mono"] .contact-links a { color: #000; }
+html[data-theme="mono"] .contact-links a:hover { border-style: inset; }
+html[data-theme="mono"] .contact-links span { color: #000; }
+html[data-theme="mono"] .site-footer { border-top: 2px solid #000; color: #222; font-family: var(--gui); }
+
+html[data-theme="mono"] .project-nav { border: 2px outset #ffffff; border-radius: 0; background: #c0c0c0; color: #222; box-shadow: 4px 4px #000; }
+html[data-theme="mono"] .project-nav a:hover { background: #000; color: #fff; }
+html[data-theme="mono"] .project-header {
+  position: relative;
+  margin-top: 2.5rem;
+  padding: 4.5rem 2.5rem 2.5rem;
+  border: 2px outset #ffffff;
+  border-radius: 0;
+  background: #d4d0c8;
+  box-shadow: 6px 6px #000;
+}
+html[data-theme="mono"] .project-header h1 { font-size: clamp(3.7rem, 8vw, 7.3rem); }
+html[data-theme="mono"] .project-summary { color: #222; }
+html[data-theme="mono"] .project-facts { border-top: 1px solid #000; }
+html[data-theme="mono"] .project-facts div { border-bottom: 1px solid #000; }
+html[data-theme="mono"] .project-facts dt { color: #000; }
+html[data-theme="mono"] .project-facts dd { color: #111; }
+html[data-theme="mono"] .project-section-heading p { color: #222; }
+html[data-theme="mono"] .explain-card { background: #c0c0c0; }
+html[data-theme="mono"] .explain-card .section-label { margin: -1.1rem -1.1rem 1.25rem; border-left: 0; border-right: 0; border-top: 0; }
+html[data-theme="mono"] .widget-shell { position: relative; padding-top: 3.2rem; background: #c0c0c0; }
+html[data-theme="mono"] .widget-toolbar,
+html[data-theme="mono"] .phase-toolbar { border-bottom: 1px solid #000; }
+html[data-theme="mono"] .widget-card,
+html[data-theme="mono"] .flow-node,
+html[data-theme="mono"] .pipeline-step,
+html[data-theme="mono"] .phase-tab,
+html[data-theme="mono"] .phase-route div,
+html[data-theme="mono"] .meantime-step,
+html[data-theme="mono"] .architecture-node,
+html[data-theme="mono"] .fortdb-flow-node { background: #d4d0c8; }
+html[data-theme="mono"] .phase-tab:hover,
+html[data-theme="mono"] .phase-tab.is-active { background: #ffffff; }
+html[data-theme="mono"] .phase-detail,
+html[data-theme="mono"] .fortdb-diagram { background: #d4d0c8; }
+html[data-theme="mono"] .code-preview { border: 2px inset #ffffff; background: #000; color: #fff; }
+html[data-theme="mono"] .visual-svg { border: 2px inset #ffffff; background: #222; }
+html[data-theme="mono"] .svg-label { fill: #fff; }
+html[data-theme="mono"] .svg-wall,
+html[data-theme="mono"] .svg-player,
+html[data-theme="mono"] .svg-enemy,
+html[data-theme="mono"] .svg-sensor { stroke: #fff; fill: #fff; }
+html[data-theme="mono"] .svg-vision { fill: rgba(255,255,255,.18); stroke: #fff; }
+html[data-theme="mono"] .svg-smoke { fill: rgba(255,255,255,.22); }
+html[data-theme="mono"] .flow-arrow,
+html[data-theme="mono"] .tree-line i,
+html[data-theme="mono"] .write-path > i,
+html[data-theme="mono"] .version-diagram > i { color: #000; }
+html[data-theme="mono"] .screenshot-frame { background: #808080; }
+html[data-theme="mono"] .screenshot-card figcaption span { color: #222; }
+html[data-theme="mono"] img { filter: grayscale(1) contrast(1.12); }
+
+@media (max-width: 760px) {
+  html[data-theme="mono"] .site-header,
+  html[data-theme="mono"] main,
+  html[data-theme="mono"] .site-footer { width: min(100% - 32px, 600px); }
+  html[data-theme="mono"] .site-header { margin-top: 1rem; }
+  html[data-theme="mono"] .home-hero { padding: 4rem 1.25rem 2rem; }
+  html[data-theme="mono"] .hero-portrait { width: min(100%, 265px); margin: 0; }
+  html[data-theme="mono"] .project-header { padding: 4rem 1.25rem 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="mono"] .about-card,
+  html[data-theme="mono"] .index-card,
+  html[data-theme="mono"] .explain-card,
+  html[data-theme="mono"] .project-header { transform: none; }
+}

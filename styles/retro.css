@@ -1,0 +1,241 @@
+/* Retro futurism: warm editorial screens, orange controls, and black ink outlines. */
+html[data-theme="retro"] {
+  --ink: #171414;
+  --muted: #66584d;
+  --paper: #efe0c4;
+  --line: #171414;
+  --blue: #f2df32;
+  --blue-ink: #171414;
+  --lilac: #f5ebd3;
+  --orange: #f26a27;
+  --orange-ink: #171414;
+  --cream: #f8eed8;
+  --acid: #f3df2e;
+  --pink: #f26a27;
+  --serif: "Arial Black", "Trebuchet MS", Arial, sans-serif;
+  --sans: "Space Grotesk", "Trebuchet MS", Arial, sans-serif;
+  --mono: "DM Mono", "Courier New", monospace;
+}
+
+html[data-theme="retro"] body {
+  background-color: #d8c09d;
+  background-image:
+    linear-gradient(rgba(255, 248, 225, .18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 248, 225, .18) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+html[data-theme="retro"] body::before,
+html[data-theme="retro"] body::after { display: none; }
+html[data-theme="retro"] a { color: inherit; }
+html[data-theme="retro"] a:hover { color: #c54116; }
+html[data-theme="retro"] a:focus-visible,
+html[data-theme="retro"] button:focus-visible,
+html[data-theme="retro"] input:focus-visible,
+html[data-theme="retro"] select:focus-visible { outline: 3px solid #f26a27; outline-offset: 3px; }
+
+html[data-theme="retro"] .site-header {
+  border: 2px solid var(--ink);
+  border-radius: 7px;
+  background: #f8eed8;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+html[data-theme="retro"] .site-header::after {
+  position: absolute;
+  right: 1rem;
+  bottom: -.85rem;
+  width: 4rem;
+  height: .28rem;
+  background: var(--orange);
+  content: "";
+  transform: skewX(-28deg);
+}
+html[data-theme="retro"] .wordmark { font-family: var(--serif); font-size: .88rem; letter-spacing: .02em; text-transform: uppercase; }
+html[data-theme="retro"] .wordmark-mark {
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 2px solid var(--ink);
+  border-radius: 50% 50% 45% 45%;
+  background: var(--orange);
+  color: var(--ink);
+  font-family: var(--serif);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+html[data-theme="retro"] nav { gap: .35rem; color: var(--ink); }
+html[data-theme="retro"] nav a { padding: .4rem .65rem; border: 2px solid transparent; font-weight: 700; }
+html[data-theme="retro"] nav a:hover { border-color: var(--ink); background: var(--acid); color: var(--ink); }
+html[data-theme="retro"] .header-meta {
+  padding: .4rem .55rem;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  background: var(--acid);
+  color: var(--ink);
+  font: .64rem var(--mono);
+}
+html[data-theme="retro"] .look-switcher { color: var(--ink); font: .64rem var(--mono); text-transform: uppercase; }
+html[data-theme="retro"] .look-switcher select,
+html[data-theme="retro"] button,
+html[data-theme="retro"] input,
+html[data-theme="retro"] select {
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--mono);
+}
+html[data-theme="retro"] .look-switcher select { min-width: 10.5rem; padding: .35rem .45rem; }
+
+html[data-theme="retro"] main { color: var(--ink); }
+html[data-theme="retro"] h1,
+html[data-theme="retro"] h2,
+html[data-theme="retro"] h3 { color: var(--ink); font-family: var(--serif); font-weight: 900; letter-spacing: -.055em; }
+html[data-theme="retro"] h1 { text-shadow: 5px 5px 0 rgba(242, 106, 39, .55); }
+html[data-theme="retro"] h2 { text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: .12em; text-underline-offset: .12em; }
+html[data-theme="retro"] h3 { text-transform: uppercase; }
+html[data-theme="retro"] .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .32rem .55rem;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  background: var(--orange);
+  color: var(--ink);
+  font: 700 .64rem var(--mono);
+  letter-spacing: .03em;
+}
+html[data-theme="retro"] .section-label::before { width: .38rem; height: .38rem; border-radius: 50%; background: var(--ink); content: ""; }
+html[data-theme="retro"] .hero-summary,
+html[data-theme="retro"] .section-note,
+html[data-theme="retro"] .text-columns,
+html[data-theme="retro"] .contact-links,
+html[data-theme="retro"] .project-summary,
+html[data-theme="retro"] .project-section-heading p,
+html[data-theme="retro"] .explain-card p { color: var(--ink); }
+html[data-theme="retro"] .hero-summary { font-weight: 600; }
+
+html[data-theme="retro"] .home-hero,
+html[data-theme="retro"] .project-header {
+  border: 2px solid var(--ink);
+  border-radius: 7px;
+  background: #f8eed8;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+html[data-theme="retro"] .home-hero::after,
+html[data-theme="retro"] .project-header::after {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.7rem;
+  width: 7rem;
+  height: 7rem;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  box-shadow: 0 0 0 9px #f8eed8, 0 0 0 11px var(--ink);
+  content: "";
+  opacity: .7;
+  pointer-events: none;
+}
+html[data-theme="retro"] .hero-portrait {
+  padding: .35rem;
+  border: 2px solid var(--ink);
+  border-radius: 7px;
+  background: var(--acid);
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: rotate(1deg);
+}
+html[data-theme="retro"] .hero-portrait img { border-radius: 3px; filter: saturate(.85) contrast(1.08) sepia(.1); }
+html[data-theme="retro"] .hero-portrait figcaption { border-top: 2px solid var(--ink); color: var(--ink); font: 700 .64rem var(--mono); text-align: center; text-transform: uppercase; }
+
+html[data-theme="retro"] .about-section,
+html[data-theme="retro"] .split-section,
+html[data-theme="retro"] .contact-section,
+html[data-theme="retro"] .project-section { border-top: 2px solid var(--ink); }
+html[data-theme="retro"] .section-heading { border-top: 0; }
+html[data-theme="retro"] .about-card,
+html[data-theme="retro"] .index-card,
+html[data-theme="retro"] .section-note,
+html[data-theme="retro"] .text-columns p,
+html[data-theme="retro"] .contact-links a,
+html[data-theme="retro"] .explain-card,
+html[data-theme="retro"] .flow-node,
+html[data-theme="retro"] .widget-shell,
+html[data-theme="retro"] .widget-card,
+html[data-theme="retro"] .screenshot-card,
+html[data-theme="retro"] .fortdb-diagram,
+html[data-theme="retro"] .architecture-node,
+html[data-theme="retro"] .meantime-step,
+html[data-theme="retro"] .pipeline-step,
+html[data-theme="retro"] .phase-tab,
+html[data-theme="retro"] .fortdb-flow-card,
+html[data-theme="retro"] .fortdb-flow-node {
+  border: 2px solid var(--ink);
+  border-radius: 5px;
+  background: #f8eed8;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+html[data-theme="retro"] .about-card-blue,
+html[data-theme="retro"] .index-card-blue { background: var(--acid); }
+html[data-theme="retro"] .about-card-pink,
+html[data-theme="retro"] .index-card-orange,
+html[data-theme="retro"] .index-card-lilac { background: var(--orange); }
+html[data-theme="retro"] .index-card-cream,
+html[data-theme="retro"] .index-card-neutral { background: var(--cream); }
+html[data-theme="retro"] .about-card:hover,
+html[data-theme="retro"] .index-card:hover,
+html[data-theme="retro"] .phase-tab:hover,
+html[data-theme="retro"] .phase-tab.is-active { box-shadow: 7px 7px 0 var(--ink); transform: translate(-2px, -2px); }
+html[data-theme="retro"] .about-card-label,
+html[data-theme="retro"] .card-index {
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  background: var(--ink);
+  color: var(--acid);
+  font-family: var(--mono);
+}
+html[data-theme="retro"] .card-type { color: #5e271b; font: 700 .62rem var(--mono); }
+html[data-theme="retro"] .index-card p { color: var(--ink); font-weight: 600; }
+html[data-theme="retro"] .card-actions { border-top: 2px solid var(--ink); }
+html[data-theme="retro"] .card-link { color: var(--ink); font: 700 .66rem var(--mono); text-decoration: underline; }
+html[data-theme="retro"] .card-git,
+html[data-theme="retro"] .project-button { border: 2px solid var(--ink); border-radius: 3px; background: var(--orange); color: var(--ink); box-shadow: 3px 3px 0 var(--ink); font-family: var(--mono); }
+html[data-theme="retro"] .card-git:hover,
+html[data-theme="retro"] .project-button:hover,
+html[data-theme="retro"] button:hover { background: var(--acid); color: var(--ink); transform: translate(-2px, -2px); }
+html[data-theme="retro"] .contact-links a { color: var(--ink); font-weight: 700; }
+html[data-theme="retro"] .contact-links a:nth-child(2) { background: var(--acid); }
+html[data-theme="retro"] .contact-links a:nth-child(3) { background: var(--orange); }
+html[data-theme="retro"] .contact-links span { color: var(--ink); }
+html[data-theme="retro"] .site-footer { border-top: 2px solid var(--ink); color: var(--ink); font-family: var(--mono); }
+
+html[data-theme="retro"] .project-nav { border: 2px solid var(--ink); border-radius: 4px; background: var(--acid); color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+html[data-theme="retro"] .project-header { background: #f8eed8; }
+html[data-theme="retro"] .project-facts { border-top: 2px solid var(--ink); }
+html[data-theme="retro"] .project-facts div { border-bottom: 2px solid var(--ink); }
+html[data-theme="retro"] .project-facts dt { color: #7b311b; }
+html[data-theme="retro"] .project-facts dd { color: var(--ink); }
+html[data-theme="retro"] .widget-shell { background: #ead5b4; }
+html[data-theme="retro"] .widget-toolbar,
+html[data-theme="retro"] .phase-toolbar { border-bottom: 2px solid var(--ink); }
+html[data-theme="retro"] .widget-card,
+html[data-theme="retro"] .pipeline-step,
+html[data-theme="retro"] .phase-tab,
+html[data-theme="retro"] .flow-node,
+html[data-theme="retro"] .meantime-step,
+html[data-theme="retro"] .architecture-node,
+html[data-theme="retro"] .fortdb-flow-node { background: #f8eed8; }
+html[data-theme="retro"] .phase-tab.is-active,
+html[data-theme="retro"] .pipeline-step.is-active { background: var(--acid); }
+html[data-theme="retro"] .visual-svg { border: 2px solid var(--ink); border-radius: 4px; background: #f3e7cf; }
+html[data-theme="retro"] .code-preview { border: 2px solid var(--ink); border-radius: 4px; background: #171414; color: var(--acid); }
+html[data-theme="retro"] .svg-wall { stroke: var(--ink); }
+html[data-theme="retro"] .svg-player { fill: var(--orange); }
+html[data-theme="retro"] .svg-enemy { fill: #b52c1d; }
+html[data-theme="retro"] .svg-sensor { fill: var(--acid); }
+html[data-theme="retro"] .svg-vision { fill: rgba(242, 106, 39, .25); stroke: var(--orange); }
+
+@media (max-width: 760px) {
+  html[data-theme="retro"] .home-hero::after,
+  html[data-theme="retro"] .project-header::after { right: 1rem; bottom: 1rem; }
+}
