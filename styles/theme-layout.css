@@ -129,15 +129,6 @@ html[data-theme]:not([data-theme="neo"]) .project-main .phase-route strong {
   font-size: .88rem;
 }
 
-html[data-theme]:not([data-theme="neo"]) .project-main .slice-controls,
-html[data-theme]:not([data-theme="neo"]) .project-main .slice-histogram-panel {
-  padding: .9rem;
-}
-
-html[data-theme]:not([data-theme="neo"]) .project-main .slice-histogram { height: 126px; }
-html[data-theme]:not([data-theme="neo"]) .project-main .slice-metrics .widget-card strong { font-size: 1.25rem; }
-html[data-theme]:not([data-theme="neo"]) .project-main .slice-widget .phase-tab { min-height: 82px; }
-
 html[data-theme]:not([data-theme="neo"]) .project-main .screenshot-frame {
   min-height: 180px;
 }

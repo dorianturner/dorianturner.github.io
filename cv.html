@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dorian Turner's performance engineering CV.">
+  <title>CV — Dorian Turner</title>
+  <script src="js/theme-config.js"></script>
+  <script src="js/theme-preload.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="styles/neo.css">
+  <link rel="stylesheet" href="styles/widgets.css">
+  <link rel="stylesheet" href="styles/fungus.css">
+  <link rel="stylesheet" href="styles/mono.css">
+  <link rel="stylesheet" href="styles/web1.css">
+  <link rel="stylesheet" href="styles/retro.css">
+  <link rel="stylesheet" href="styles/eyesore.css">
+  <link rel="stylesheet" href="styles/theme-layout.css">
+  <link rel="stylesheet" href="styles/cv.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Dorian Turner portfolio home"><span class="wordmark-mark">DT</span><span>Dorian Turner</span></a>
+    <nav aria-label="Primary navigation"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+    <div class="header-tools">
+      <label class="look-switcher" for="look-select"><span>Look</span><select id="look-select" name="look"><option value="neo">Neo-brutalist</option><option value="fungus">Organic</option><option value="mono">Old-school mono desktop</option><option value="web1">Web 1.0</option></select></label>
+      <span class="header-meta">CV / 2026</span>
+    </div>
+  </header>
+
+  <main class="cv-page">
+    <section class="cv-hero" aria-labelledby="cv-title">
+      <div>
+        <p class="section-label">Curriculum vitae / performance engineering</p>
+        <h1 id="cv-title">Dorian Turner</h1>
+        <p class="cv-lede">Computing student and performance engineer working on latency-critical systems, compilers, and practical tools.</p>
+      </div>
+      <div class="cv-actions">
+        <a class="cv-chip" href="assets/cv/performance-engineering.pdf" target="_blank" rel="noopener noreferrer">Open PDF <span aria-hidden="true">↗</span></a>
+        <a class="cv-chip cv-chip-secondary" href="assets/cv/performance-engineering.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <article class="cv-sheet">
+      <header class="cv-contact">
+        <div><p class="section-label">Contact</p><h2>Performance engineering</h2></div>
+        <div class="cv-contact-links"><a href="mailto:dorianturnerwork@gmail.com">dorianturnerwork@gmail.com</a><a href="tel:+447555169172">+44 7555 169172</a><a href="https://www.linkedin.com/in/dorian-turner/" target="_blank" rel="noopener noreferrer">linkedin.com/in/dorian-turner ↗</a><span>London, England</span></div>
+      </header>
+
+      <section class="cv-section" aria-labelledby="cv-education-title">
+        <h2 id="cv-education-title">Education</h2>
+        <article class="cv-entry">
+          <div class="cv-entry-heading"><div><h3>Imperial College London</h3><p>BEng Computing</p></div><time>Oct. 2024 – June 2027</time></div>
+          <ul>
+            <li><strong>Degree:</strong> 1:1 score achieved in Year 1. Predicted First Class (equiv. 4.0 GPA).</li>
+            <li><strong>Relevant Modules:</strong> Computer Systems — 82.53%, Databases — 78.04%, Algorithms — 77.33%.</li>
+            <li><strong>Achievements:</strong> Elected year-wide well-being representative; Most Interesting Extension, ARMV8 C Project Prize; Encode ARC '26 1st Place Overall; People's Choice Award in Amazon University Engagement Program.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-experience-title">
+        <h2 id="cv-experience-title">Experience</h2>
+        <article class="cv-entry">
+          <div class="cv-entry-heading"><div><h3>Software Intern / Bloomberg</h3><p>Core Products division</p></div><time>London, England<br>June 2026 – Ongoing</time></div>
+          <ul>
+            <li>Optimising the performance of a <strong>latency-critical distributed microservice</strong> responsible for validating data entitlements in the core data flow of the Bloomberg Terminal.</li>
+            <li>Designing and implementing <strong>request batching</strong> in C++ to reduce network overhead, minimise redundant external service calls, and <strong>improve tail latency</strong>.</li>
+            <li>Analysing service bottlenecks through profiling and performance testing to identify inefficiencies and improve throughput in a high-scale distributed environment.</li>
+            <li>Collaborating with senior engineers to evaluate system trade-offs, validate performance improvements, and ensure reliability and scalability across production workflows.</li>
+          </ul>
+        </article>
+        <article class="cv-entry">
+          <div class="cv-entry-heading"><div><h3>Software Intern / Bridge Technologies</h3><p>Broadcast monitoring and local AI tooling</p></div><time>Oslo, Norway<br>July 2025 – Aug. 2025</time></div>
+          <ul>
+            <li>Developed a machine-learning tool to derive MOS image scores; it ran <strong>15% faster</strong> than the previous tool and was <strong>32% more correlated</strong> with human scores.</li>
+            <li>Researched and developed a glitch detection algorithm for macro-blocking artifacts in live broadcast streams.</li>
+            <li>Deployed LLMs via a Slack chatbot for documentation Q&amp;A and an FAQ website powered by a local RAG backend on a Mac Mini cluster.</li>
+            <li><strong>Stack:</strong> Python, OpenCV, FFmpeg, C++, ChatGPT, Local LLM, and FAISS.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-projects-title">
+        <h2 id="cv-projects-title">Projects</h2>
+        <article class="cv-entry">
+          <div class="cv-entry-heading"><div><h3>FortDB <span>(Independent Duo Project)</span></h3></div><time><a href="https://github.com/dorianturner/fortdb" target="_blank" rel="noopener noreferrer">Git ↗</a><br>July – Aug. 2025</time></div>
+          <ul>
+            <li>Developed a <strong>thread-safe, NoSQL, append-only</strong> database in C with another student.</li>
+            <li>Designed custom abstract syntax trees for hierarchical data storage, enabling versioned path resolution, subdocument nesting, and time-travel queries with efficient traversal.</li>
+            <li>Implemented concurrency and memory primitives: thread-safe hashmaps with versioned linked nodes.</li>
+            <li><strong>Tools:</strong> C POSIX standard library, C, Nix, Linux, and NixOS.</li>
+          </ul>
+        </article>
+        <article class="cv-entry">
+          <div class="cv-entry-heading"><div><h3>Slice <span>(Solo Project)</span></h3></div><time><a href="https://github.com/dorianturner/slice" target="_blank" rel="noopener noreferrer">Git ↗</a><br>Aug. 2026</time></div>
+          <ul>
+            <li>Slice is a Linux x86-64 <strong>percentile profiler</strong> showing which call-stack paths occur during the slowest executions of one exact C++ function.</li>
+            <li>Targets an exact <strong>demangled ELF symbol</strong> with uprobes, then combines eBPF sampling, invocation IDs, per-thread stacks, and percentile, thread, and time-range filters.</li>
+            <li>On a <strong>bimodally distributed C++ test service</strong>, a p95:p100 query isolates the tail, making the slow function more prominent than in the aggregate p00:p100 graph.</li>
+            <li><strong>Tools:</strong> Rust, C++, DWARF, Linux, CMake, Ninja.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section cv-technologies" aria-labelledby="cv-technologies-title">
+        <h2 id="cv-technologies-title">Technologies</h2>
+        <p><strong>Languages:</strong> C/C++, Java, Kotlin, Python, Haskell, Scala, Nix, SQL, and Bash</p>
+        <p><strong>Tools &amp; Frameworks:</strong> Git, Docker, FFmpeg, OpenCV, FASTApi, Firebase, Claude Code, MCP, and AI</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><span>Dorian Turner</span><span>CV / 2026</span><a href="index.html">Portfolio ↑</a></footer>
+</body>
+</html>
