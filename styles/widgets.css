@@ -144,3 +144,35 @@ select, button { border: 1px solid var(--ink); border-radius: 0; background: var
 }
 
 #architecture-visual .screenshot-grid { grid-template-columns: 1fr; }
+
+.slice-widget { display: grid; gap: 1rem; }
+.slice-widget .phase-toolbar { align-items: start; }
+.slice-widget .phase-toolbar > div { flex: 1; min-width: 0; }
+.slice-widget .phase-tabs { grid-template-columns: repeat(3, 1fr); }
+.slice-widget .phase-tab { min-height: 96px; }
+.slice-widget .phase-detail { margin-top: 0; }
+.slice-widget .phase-route code { display: block; margin-top: .45rem; overflow-wrap: anywhere; font: .68rem/1.45 var(--mono); }
+.slice-controls { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; padding: 1rem; border: 1px solid var(--line); background: var(--paper); }
+.slice-controls .control { min-width: 0; }
+.slice-results { display: grid; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 1rem; }
+.slice-histogram-panel { padding: 1rem; border: 1px solid var(--line); background: #fffef9; }
+.slice-panel-heading, .slice-axis { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font: .65rem var(--mono); }
+.slice-panel-heading strong { color: var(--ink); }
+.slice-histogram { display: flex; align-items: end; gap: .3rem; height: 150px; margin-top: 1rem; padding: .6rem .5rem 0; border: 1px dotted var(--line); background: var(--paper); }
+.slice-bar { display: block; flex: 1; min-width: 4px; height: var(--bar-height); background: var(--blue-ink); opacity: .58; }
+.slice-bar.is-selected { background: var(--orange-ink); opacity: 1; }
+.slice-axis { margin-top: .45rem; }
+.slice-metrics { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+.slice-metrics .widget-card { min-height: 0; }
+.slice-metrics .widget-card strong { font-family: var(--sans); font-size: 1.5rem; }
+.slice-screenshots { margin-top: .5rem; }
+.slice-screenshots .screenshot-frame { min-height: 0; align-items: start; padding: .5rem; }
+.slice-screenshots .screenshot-card figcaption strong { font-size: 1rem; }
+@media (max-width: 800px) {
+  .slice-widget .phase-tabs { grid-template-columns: 1fr; }
+  .slice-controls, .slice-results { grid-template-columns: 1fr; }
+  .slice-metrics { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 520px) {
+  .slice-metrics { grid-template-columns: 1fr; }
+}
