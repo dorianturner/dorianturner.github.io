@@ -1,9 +1,9 @@
 (() => {
   const themeConfig = window.DorianThemeConfig || {
     key: "dorian-portfolio-look",
-    defaultTheme: "retro",
-    themes: [{ id: "retro", label: "Retro futurism" }],
-    normalize: (theme) => theme || "retro",
+    defaultTheme: "neo",
+    themes: [{ id: "neo", label: "Neo-brutalist" }],
+    normalize: (theme) => theme || "neo",
   };
   const themeKey = themeConfig.key;
   const root = document.documentElement;

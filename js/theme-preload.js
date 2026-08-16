@@ -1,8 +1,8 @@
 (() => {
   const themeConfig = window.DorianThemeConfig || {
     key: "dorian-portfolio-look",
-    defaultTheme: "retro",
-    normalize: (theme) => theme || "retro",
+    defaultTheme: "neo",
+    normalize: (theme) => theme || "neo",
   };
   const themeKey = themeConfig.key;
   let savedTheme = "";

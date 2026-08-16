@@ -39,6 +39,7 @@ html[data-theme] .home-hero {
   padding: 4.5rem 3rem 3rem;
 }
 html[data-theme] .hero-portrait { width: min(100%, 320px); margin: 0 0 0 auto; }
+html[data-theme] .hero-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 html[data-theme] h1 { font-size: clamp(4rem, 10vw, 9rem); line-height: .82; }
 html[data-theme] h2 { font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: .88; }
 html[data-theme] h3 { font-size: clamp(2.2rem, 4vw, 4rem); line-height: .95; }
@@ -84,4 +85,75 @@ html[data-theme] .explain-card { min-height: 190px; }
   html[data-theme] .explain-grid { grid-template-columns: 1fr; }
   html[data-theme] .contact-links { grid-template-columns: 1fr; }
   html[data-theme] .project-section-heading { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Non-Neo widget contract: surfaces can change, but their contents stay bounded. */
+html[data-theme]:not([data-theme="neo"]) .project-main h3 {
+  font-size: clamp(1.45rem, 2.6vw, 2.5rem);
+  line-height: 1.05;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .explain-card h3,
+html[data-theme]:not([data-theme="neo"]) .project-main .diagram-heading h3,
+html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-flow-card .diagram-heading h3 {
+  font-size: clamp(1.35rem, 2.4vw, 2.35rem);
+  line-height: 1.05;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .widget-shell,
+html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-diagram {
+  padding: 1.25rem;
+}
+
+html[data-theme="mono"] .project-main .widget-shell { padding-top: 2.75rem; }
+
+html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-flow-node,
+html[data-theme]:not([data-theme="neo"]) .project-main .architecture-node {
+  min-height: 100px;
+  padding: .85rem;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-flow-node strong,
+html[data-theme]:not([data-theme="neo"]) .project-main .architecture-node strong,
+html[data-theme]:not([data-theme="neo"]) .project-main .context-band strong {
+  font-size: 1rem;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .phase-tab {
+  min-height: 76px;
+  padding: .65rem;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .phase-tab strong,
+html[data-theme]:not([data-theme="neo"]) .project-main .phase-route strong {
+  font-size: .88rem;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .slice-controls,
+html[data-theme]:not([data-theme="neo"]) .project-main .slice-histogram-panel {
+  padding: .9rem;
+}
+
+html[data-theme]:not([data-theme="neo"]) .project-main .slice-histogram { height: 126px; }
+html[data-theme]:not([data-theme="neo"]) .project-main .slice-metrics .widget-card strong { font-size: 1.25rem; }
+html[data-theme]:not([data-theme="neo"]) .project-main .slice-widget .phase-tab { min-height: 82px; }
+
+html[data-theme]:not([data-theme="neo"]) .project-main .screenshot-frame {
+  min-height: 180px;
+}
+
+@media (max-width: 760px) {
+  html[data-theme]:not([data-theme="neo"]) .project-main .widget-shell,
+  html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-diagram {
+    padding: .9rem;
+  }
+
+  html[data-theme]:not([data-theme="neo"]) .project-main h3,
+  html[data-theme]:not([data-theme="neo"]) .project-main .explain-card h3,
+  html[data-theme]:not([data-theme="neo"]) .project-main .diagram-heading h3,
+  html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-flow-card .diagram-heading h3 {
+    font-size: clamp(1.3rem, 7vw, 2rem);
+  }
+
+  html[data-theme="mono"] .project-main .widget-shell { padding-top: 2.4rem; }
 }

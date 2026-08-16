@@ -13,7 +13,7 @@
 
   window.DorianThemeConfig = Object.freeze({
     key: "dorian-portfolio-look",
-    defaultTheme: "retro",
+    defaultTheme: "neo",
     themes: Object.freeze(themes),
     normalize(theme) {
       if (themeIds.has(theme)) return theme;
