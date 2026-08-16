@@ -133,6 +133,30 @@ html[data-theme]:not([data-theme="neo"]) .project-main .screenshot-frame {
   min-height: 180px;
 }
 
+/* Non-Neo project cards: keep the repository action compact and docked right. */
+html[data-theme]:not([data-theme="neo"]) .index-card .card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-top: 1rem;
+  padding-top: .65rem;
+}
+
+html[data-theme]:not([data-theme="neo"]) .index-card .card-link {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+html[data-theme]:not([data-theme="neo"]) .index-card .card-git {
+  flex: 0 0 auto;
+  padding: .3rem .5rem;
+  font-size: .62rem;
+  line-height: 1;
+}
+
 /* Slice overview: keep the motivation and investigation loop in one bounded widget. */
 html[data-theme] .slice-overview-widget {
   display: grid;
