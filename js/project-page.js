@@ -24,17 +24,17 @@ if (!root || !project) {
       <dl class="project-facts">${project.facts.map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join("")}</dl>
     </header>
     <section class="project-section" aria-labelledby="overview-title">
-      <div class="project-section-heading"><div><p class="section-label">01 / Overview</p><h2 id="overview-title">Project overview</h2></div><p>${project.overview}</p></div>
+      <div class="project-section-heading${project.hideSectionDescriptions ? " is-solo" : ""}"><div><p class="section-label">01 / Overview</p><h2 id="overview-title">Project overview</h2></div>${project.hideSectionDescriptions ? "" : `<p>${project.overview}</p>`}</div>
       <div class="explain-grid">${project.sections.map(([title, text], index) => `<article class="explain-card"><p class="section-label">${String(index + 1).padStart(2, "0")}</p><h3>${title}</h3><p>${text}</p></article>`).join("")}</div>
     </section>
     ${narrativeLayout ? `
     <section class="project-section" aria-labelledby="solution-title">
-      <div class="project-section-heading"><div><p class="section-label">02 / Solution</p><h2 id="solution-title">${project.solution.heading}</h2></div><p>${project.solution.description}</p></div>
+      <div class="project-section-heading${project.hideSectionDescriptions ? " is-solo" : ""}"><div><p class="section-label">02 / Solution</p><h2 id="solution-title">${project.solution.heading}</h2></div>${project.hideSectionDescriptions ? "" : `<p>${project.solution.description}</p>`}</div>
       <div id="solution-visual" class="widget-shell"></div>
     </section>
     <section class="project-section" aria-labelledby="architecture-title">
-      <div class="project-section-heading"><div><p class="section-label">03 / Architecture</p><h2 id="architecture-title">${project.architectureVisual.heading}</h2></div><p>${project.architectureVisual.description}</p></div>
-      <div id="project-map"></div>
+      <div class="project-section-heading${project.hideSectionDescriptions ? " is-solo" : ""}"><div><p class="section-label">03 / Architecture</p><h2 id="architecture-title">${project.architectureVisual.heading}</h2></div>${project.hideSectionDescriptions ? "" : `<p>${project.architectureVisual.description}</p>`}</div>
+      ${project.hideMap ? "" : '<div id="project-map"></div>'}
       <div id="architecture-visual" class="widget-shell"></div>
     </section>` : `
     ${project.hideMap ? "" : `<section class="project-section" aria-labelledby="map-title">

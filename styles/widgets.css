@@ -130,6 +130,7 @@ select:hover, button:hover { background: var(--pink); color: var(--ink); transfo
 .fortdb-flow-node strong { font-family: var(--sans); font-size: 1.1rem; font-weight: 900; line-height: 1.1; }
 .fortdb-flow-node span, .fortdb-compaction-files span { color: var(--ink); font-size: .75rem; font-weight: 700; line-height: 1.35; }
 .fortdb-flow-node code { padding: .55rem; background: var(--ink); color: var(--acid); font: .72rem/1.35 var(--mono); white-space: normal; overflow-wrap: anywhere; }
+.fortdb-flow-node span code { padding: 0; background: transparent; color: inherit; font: inherit; }
 .fortdb-flow-row > i, .fortdb-chain > i, .fortdb-read-route > i, .fortdb-read-chain > i, .fortdb-compaction-files > i { align-self: center; color: var(--ink); font: 900 1.4rem var(--mono); font-style: normal; }
 .fortdb-parse-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 1rem; }
 .fortdb-parse-options div { display: grid; gap: .35rem; padding: .75rem; border: 3px solid var(--ink); background: var(--cream); }

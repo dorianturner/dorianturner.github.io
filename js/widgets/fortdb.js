@@ -37,11 +37,11 @@ function renderFortdb(root) {
     <article class="fortdb-diagram fortdb-flow-card">
       <div class="diagram-heading"><span>03 / Historical read</span><h3>Walk the chain to the requested state</h3></div>
       <div class="fortdb-read-grid">
-        <div class="fortdb-read-route"><div class="fortdb-flow-node"><small>latest read</small><code>get users/alice/age</code></div><i aria-hidden="true">→</i><div class="fortdb-flow-node is-accent"><small>result</small><strong>latest visible value</strong><span>skip tombstones, return current state</span></div></div>
-        <div class="fortdb-read-route"><div class="fortdb-flow-node"><small>time travel</small><code>get users/alice/age --v=1</code></div><i aria-hidden="true">→</i><div class="fortdb-flow-node is-accent"><small>result</small><strong>v1 = 21</strong><span>follow <code>prev</code> until the requested local version</span></div></div>
+        <div class="fortdb-read-route"><div class="fortdb-flow-node"><small>latest read</small><code>get users/alice/age</code></div><i aria-hidden="true">→</i><div class="fortdb-flow-node is-accent"><small>result</small><strong>deleted</strong><span>the newest node is a tombstone at v3</span></div></div>
+        <div class="fortdb-read-route"><div class="fortdb-flow-node"><small>time travel</small><code>get users/alice/age --v=2</code></div><i aria-hidden="true">→</i><div class="fortdb-flow-node is-accent"><small>result</small><strong>v2 = 29</strong><span>follow <code>prev</code> until the requested local version</span></div></div>
       </div>
-      <div class="fortdb-read-chain"><div class="fortdb-version is-tombstone"><b>v3</b><span>deleted</span></div><i aria-hidden="true">→</i><div class="fortdb-version"><b>v2</b><span>29</span></div><i aria-hidden="true">→</i><div class="fortdb-version is-selected"><b>v1</b><span>21 / selected</span></div></div>
-      <p>A normal GET resolves the newest visible state. Supplying <code>--v</code> changes the stopping point, so the same chain can answer historical questions without restoring an old database snapshot.</p>
+      <div class="fortdb-read-chain"><div class="fortdb-version is-tombstone"><b>v3</b><span>deleted</span></div><i aria-hidden="true">→</i><div class="fortdb-version is-selected"><b>v2</b><span>29 / selected</span></div><i aria-hidden="true">→</i><div class="fortdb-version"><b>v1</b><span>21</span></div></div>
+      <p>A normal GET returns deleted because the newest node is a tombstone. Supplying <code>--v=2</code> changes the stopping point, so the same chain returns the historical value <strong>29</strong>.</p>
     </article>
 
     <article class="fortdb-diagram fortdb-flow-card">

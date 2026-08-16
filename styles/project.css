@@ -17,6 +17,7 @@
 @media (max-width: 760px) { .project-header { padding: 2rem 1.25rem; box-shadow: 7px 7px 0 var(--ink); }.project-section { padding-bottom: 4rem; }.explain-card { box-shadow: 4px 4px 0 var(--ink); } }
 
 .explain-card h3 { font-family: var(--sans); }
+.project-section-heading.is-solo { grid-template-columns: 1fr; }
 .project-links { display: flex; margin-top: 1.5rem; }
 .project-button { border: 3px solid var(--ink); background: var(--pink); color: var(--ink); box-shadow: 5px 5px 0 var(--ink); font-family: var(--mono); font-weight: 800; }
 .project-button:hover { background: var(--acid); color: var(--ink); transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }

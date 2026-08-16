@@ -13,6 +13,8 @@ window.projectData = {
   ],
   sourceFiles: ["src/deadline-food/DeadlineFoodApp.tsx", "src/domain/recommendationRules.ts", "src/domain/types.ts", "src/deadline-food/screens/PlanScreen.tsx"],
   sourceUrl: "https://github.com/KOLESNiii/Fed-Up",
+  hideMap: true,
+  hideSectionDescriptions: true,
   solution: {
     type: "screenshots",
     heading: "Solution: Fed Up in practice",
@@ -25,10 +27,11 @@ window.projectData = {
   },
   architectureVisual: {
     type: "screenshots",
-    heading: "System architecture",
+    heading: "System architecture + tech stack",
     description: "The architecture connects the student-facing web app to Firebase functions, nutrition data, cached sessions, and the recommendation service behind the plan.",
     images: [
       ["../assets/fed-up/system-architecture.png", "01 / Support the recommendation", "The system brings together the web app, backend functions, student data, nutrition sources, and recommendation services that power Fed Up."],
+      ["../assets/fed-up/tech-stack.png", "02 / Choose the right tools", "The stack combines React and TypeScript at the interface, Firebase for the serverless backend, and a dedicated recipe-intelligence layer for explainable recommendations."],
     ],
   },
 };
