@@ -1,0 +1,3 @@
+# Graphify's generated graph, reports, caches, and intermediate extraction files
+graphify-out/
+.graphify_*

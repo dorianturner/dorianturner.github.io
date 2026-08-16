@@ -1,0 +1,21 @@
+window.projectData = {
+  slug: "fortdb",
+  title: "FortDB",
+  source: "fortdb",
+  category: "C / storage engine",
+  summary: "Append-only key-value database focused on durability and self-owned data structures.",
+  facts: [["Stack", "C"], ["Model", "Append-only records"], ["Focus", "Durability · storage"]],
+  diagram: [["Command", "set / get / delete"], ["IR", "Instr union"], ["Document", "paths + subdocuments"], ["Versions", "linked history"], ["Storage", "serialize / load"]],
+  overview: "FortDB is a C storage engine that keeps the path from command parsing to durable, versioned document state visible in its own data structures.",
+  sections: [["AST-shaped IR", "parser.c turns CLI arguments into an Instr tagged union. Each operation carries only the fields it needs: a path, value, version, or filename."], ["Versioned documents", "Document stores fields and subdocuments in hash maps whose values are VersionNode chains. A new value points back to the previous version instead of overwriting it."], ["Durability", "decode_and_execute dispatches the instruction, while serializer.c and deserializer.c write or restore the versioned document graph. Compaction is an explicit operation, not an invisible mutation."]],
+  sourceFiles: ["src/ir.h", "src/parser.c", "src/decode_and_execute.c", "src/utils/document.h", "src/utils/version_node.h", "src/storage/serializer.c", "src/storage/deserializer.c"],
+  sourceUrl: "https://github.com/dorianturner/fortdb/tree/main",
+  hideMap: true,
+  visual: {
+    type: "diagram",
+    widget: "fortdb",
+    sectionLabel: "03 / Data flows",
+    heading: "FortDB internals",
+    description: "Follow one instruction from the interactive CLI into the instruction representation, then trace an append-only delete, a historical read, and atomic compaction.",
+  },
+};

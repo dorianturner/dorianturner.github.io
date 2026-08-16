@@ -1,185 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dorian Turner — Computing student at Imperial College London. I build systems software, compilers, and hardware projects." />
-  <meta property="og:title" content="Dorian Turner" />
-  <meta property="og:description" content="Computing student at Imperial College London. Projects include a Brainfuck compiler in HolyC, an append-only key-value database, and a prize-winning cocktail robot." />
-  <meta property="og:type" content="website" />
-
-  <title>Dorian Turner</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dorian Turner — computing student portfolio. Systems, compilers, applications, and embedded hardware.">
+  <title>Dorian Turner — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="styles/widgets.css">
 </head>
 <body>
-  <div class="accent-bar"></div>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Dorian Turner portfolio home"><span class="wordmark-mark">DT</span><span>Dorian Turner</span></a>
+    <nav aria-label="Primary navigation"><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <span class="header-meta">Portfolio / 2026</span>
+  </header>
 
-  <main class="container">
-    <header class="header">
-      <h1>Dorian Turner</h1>
-      <p class="subtitle">Computing · Imperial College London</p>
-    </header>
-
-    <section class="fade-in">
-      <h2>About Me</h2>
-      <p>
-        I am a computing student at <b> Imperial College London </b> with some experience in making stuff I find cool, both in a group, and on my own.
-        I enjoy working on technical projects and diving deep into the nitty gritty of how things work.
-      </p>
+  <main>
+    <section class="home-hero" aria-labelledby="page-title">
+      <div>
+        <p class="section-label">Computing student / Imperial College London</p>
+        <h1 id="page-title">Dorian Turner</h1>
+        <p class="hero-summary">Performance Engineering, Compilers, and fun projects.</p>
+      </div>
+      <figure class="hero-portrait">
+        <img src="assets/profile/dorian-headshot.png" alt="Portrait of Dorian Turner">
+        <figcaption>Dorian Turner / computing student</figcaption>
+      </figure>
     </section>
 
-    <section class="fade-in">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <span class="skill-label">Languages</span>
-          <div class="tech-tags">
-            <span class="tag">HolyC</span>
-            <span class="tag">C/C++</span>
-            <span class="tag">Python</span>
-            <span class="tag">Java</span>
-            <span class="tag">Kotlin</span>
-            <span class="tag">Scala</span>
-            <span class="tag">Nix</span>
-            <span class="tag">Haskell</span>
-            <span class="tag">x86 Assembly</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <span class="skill-label">Tools &amp; Platforms</span>
-          <div class="tech-tags">
-            <span class="tag">Android</span>
-            <span class="tag">Raspberry Pi</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Git</span>
-          </div>
-        </div>
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="section-heading about-heading"><div><p class="section-label">01 / About</p><h2 id="about-title">About me</h2></div></div>
+      <div class="about-copy">
+        <article class="about-card about-card-blue"><span class="about-card-label">01 / What I make</span><p>I’m Dorian, a Computing student at Imperial College London. I like playing around with ideas I have to make useful or fun projects that other people can use.</p></article>
+        <article class="about-card about-card-pink"><span class="about-card-label">02 / What I do</span><p>In my professional work, I primarily specialise in performance engineering in C++. Outside of that, I enjoy messing about with fun projects and taking on more technical problems, like compilers.</p></article>
       </div>
     </section>
 
-    <section class="fade-in">
-      <h2>Projects</h2>
-      <ul class="projects">
-
-        <li class="project-card">
-          <h3>FortDB</h3>
-          <div class="tech-tags">
-            <span class="tag">Systems</span>
-            <span class="tag">Key-Value Store</span>
-            <span class="tag">Storage Engine</span>
-            <span class="tag">C</span> 
-          </div>
-          <p class="project-desc">
-            Append-only key-value database with a focus on durability, implementing all of the data structures and representations ourselves.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/dorianturner/fortdb/tree/main" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-          </div>
-        </li>
-
-        <li class="project-card">
-          <h3>Roomie</h3>
-          <div class="tech-tags">
-            <span class="tag">Kotlin</span>
-            <span class="tag">Android</span>
-          </div>
-          <p class="project-desc">
-            Android application helping university students find compatible flatmates
-            using tinder-style swiping logic to find groups with similar preferences to them.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/dorianturner/Roomie" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-          </div>
-        </li>
-
-        <li class="project-card">
-          <h3>Holy Brainfuck</h3>
-          <div class="tech-tags">
-            <span class="tag">HolyC</span>
-            <span class="tag">x86 Assembly</span>
-            <span class="tag">Compilers</span>
-          </div>
-          <p class="project-desc">
-            A full (optimised) compiler for the Brainfuck language written in Holy C, including lexing,
-            parsing, bytecode generation, assembly generation, and executable generation.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/dorianturner/holy_brainfuck" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-          </div>
-        </li>
-
-        <li class="project-card">
-          <h3>Cocktail Pi</h3>
-          <div class="tech-tags">
-            <span class="tag">C</span>
-            <span class="tag">Raspberry Pi</span>
-            <span class="tag">Embedded</span>
-          </div>
-          <p class="project-desc">
-            A cocktail maker, programmed in C, running on a raspberry pi, to pour me a drink in summer at lightning speed.
-            Made as a part of the Imperial Y1 C Final Project, and came 3/58, winning the Most Interesting Extension prize.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/dorianturner/cocktailpi" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-            <a href="https://www.canva.com/design/DAGq4TJJdXg/JS_7Lp85obAfDeTzP8mfoA/edit" target="_blank" rel="noopener noreferrer">View presentation →</a>
-          </div>
-        </li>
-
-      </ul>
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="section-heading projects-heading"><div><p class="section-label">02 / Projects</p><h2 id="projects-title">Project index</h2></div></div>
+      <div class="project-index">
+        <article class="index-card index-card-blue"><span class="card-index">01</span><span class="card-type">Web application / recommendation</span><h3>Fed Up</h3><p>Deadline-aware meal planning for students under workload pressure.</p><span class="card-actions"><a class="card-link" href="projects/fed-up.html">Open explainer →</a><a class="card-git" href="https://github.com/KOLESNiii/Fed-Up" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-neutral"><span class="card-index">02</span><span class="card-type">C / storage engine</span><h3>FortDB</h3><p>Append-only key-value database focused on durability.</p><span class="card-actions"><a class="card-link" href="projects/fortdb.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/fortdb/tree/main" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-lilac"><span class="card-index">03</span><span class="card-type">Multiplayer game / simulation</span><h3>Sightline</h3><p>Server-authoritative 2D tactical shooter with visibility control.</p><span class="card-actions"><a class="card-link" href="projects/tac-shooter.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/2D-Tac-Shooter" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-blue"><span class="card-index">04</span><span class="card-type">Solidity / CCTP / React</span><h3>MeanTime</h3><p>Tradeable on-chain receivables during cross-chain settlement.</p><span class="card-actions"><a class="card-link" href="projects/mean-time.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/Mean-Time" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-orange"><span class="card-index">05</span><span class="card-type">Embedded C / Raspberry Pi</span><h3>Cocktail Pi</h3><p>GPIO-controlled drink dispenser with LCD state feedback.</p><span class="card-actions"><a class="card-link" href="projects/cocktail-pi.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/cocktailpi" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-lilac"><span class="card-index">06</span><span class="card-type">Scala / compiler backend</span><h3>WACC compiler</h3><p>Compiler pipeline targeting x86-64 and ARM32 assembly.</p><span class="card-actions"><a class="card-link" href="projects/wacc.html">Open explainer →</a><a class="card-git" href="https://gitlab.doc.ic.ac.uk/lab2526_spring/wacc_05" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-neutral"><span class="card-index">07</span><span class="card-type">Kotlin / Android</span><h3>Roomie</h3><p>Flatmate matching app for university students.</p><span class="card-actions"><a class="card-link" href="projects/roomie.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/Roomie" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card index-card-cream"><span class="card-index">08</span><span class="card-type">Rust / terminal runtime</span><h3>Harness</h3><p>Typed event-driven terminal runtime for AI coding sessions.</p><span class="card-actions"><a class="card-link" href="projects/harness.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/harness" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+      </div>
     </section>
 
-    <section class="fade-in">
-      <h2>Contact</h2>
-      <ul class="contact">
-        <li>
-          <a href="mailto:dorianturnerwork@gmail.com" class="contact-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            dorianturnerwork@gmail.com
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/dorianturner" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            github.com/dorianturner
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/dorian-turner/" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            linkedin.com/in/dorian-turner
-          </a>
-        </li>
-      </ul>
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div><p class="section-label">03 / Contact</p><h2 id="contact-title">Contact details</h2></div>
+      <div class="contact-links"><a href="mailto:dorianturnerwork@gmail.com">Email <span>↗</span></a><a href="https://github.com/dorianturner" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://www.linkedin.com/in/dorian-turner/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a></div>
     </section>
-
-    <footer class="footer fade-in">
-      <p>Last Updated: Feb 24th 2026</p>
-    </footer>
   </main>
 
-  <script>
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
-    );
-
-    // Stagger elements that are already in the viewport on load
-    document.querySelectorAll('.fade-in').forEach((el, i) => {
-      const inView = el.getBoundingClientRect().top < window.innerHeight;
-      if (inView) el.style.transitionDelay = `${i * 0.08}s`;
-      observer.observe(el);
-    });
-  </script>
+  <footer class="site-footer"><span>Dorian Turner</span><span>Portfolio / 2026</span><a href="#projects">Projects ↑</a></footer>
+  <script src="js/site.js"></script>
 </body>
 </html>
