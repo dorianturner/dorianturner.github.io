@@ -28,7 +28,7 @@ window.projectData = {
     type: "widget",
     widget: "slice",
     sectionLabel: "03 / Slice profiler",
-    heading: "From symbol to slow tail",
+    heading: "Demo Artefact",
     description: "Try the three decisions that shape a Slice investigation: discover the exact function, capture a population of executions, then reduce it with time, thread, and percentile controls.",
   },
 };
