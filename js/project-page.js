@@ -24,7 +24,15 @@ if (!root || !project) {
       <dl class="project-facts">${project.facts.map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join("")}</dl>
     </header>
     <section class="project-section" aria-labelledby="overview-title">
-      <div class="project-section-heading${project.hideSectionDescriptions ? " is-solo" : ""}"><div><p class="section-label">01 / Overview</p><h2 id="overview-title">Project overview</h2></div>${project.hideSectionDescriptions ? "" : `<p>${project.overview}</p>`}</div>
+      <div class="project-section-heading${project.hideSectionDescriptions || project.overviewWidget ? " is-solo" : ""}"><div><p class="section-label">01 / Overview</p><h2 id="overview-title">Project overview</h2></div>${project.hideSectionDescriptions || project.overviewWidget ? "" : `<p>${project.overview}</p>`}</div>
+      ${project.overviewWidget ? `<div class="slice-overview-widget">
+        <div class="slice-overview-copy">
+          <p class="phase-source">${project.overviewWidget.label}</p>
+          <p class="slice-overview-lead">${project.overviewWidget.lead}</p>
+          <p class="slice-overview-context">${project.overview}</p>
+        </div>
+        <div class="slice-overview-flow">${project.overviewWidget.steps.map(([label, title, text]) => `<article class="slice-overview-step"><span>${label}</span><h3>${title}</h3><p>${text}</p></article>`).join("")}</div>
+      </div>` : ""}
       <div class="explain-grid">${project.sections.map(([title, text], index) => `<article class="explain-card"><p class="section-label">${String(index + 1).padStart(2, "0")}</p><h3>${title}</h3><p>${text}</p></article>`).join("")}</div>
     </section>
     ${narrativeLayout ? `

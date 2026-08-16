@@ -133,7 +133,78 @@ html[data-theme]:not([data-theme="neo"]) .project-main .screenshot-frame {
   min-height: 180px;
 }
 
+/* Slice overview: keep the motivation and investigation loop in one bounded widget. */
+html[data-theme] .slice-overview-widget {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr);
+  gap: 1rem;
+}
+
+html[data-theme] .slice-overview-copy,
+html[data-theme] .slice-overview-step {
+  display: grid;
+  align-content: start;
+  gap: .8rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+html[data-theme] .slice-overview-copy .phase-source,
+html[data-theme] .slice-overview-step > span {
+  margin: 0;
+  color: var(--blue-ink);
+  font: .65rem var(--mono);
+  text-transform: uppercase;
+}
+
+html[data-theme] .slice-overview-lead {
+  margin: 0;
+  font: 700 clamp(1.25rem, 2.3vw, 2rem)/1.1 var(--sans);
+  letter-spacing: -.04em;
+}
+
+html[data-theme] .slice-overview-context,
+html[data-theme] .slice-overview-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+html[data-theme] .slice-overview-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+html[data-theme] .slice-overview-step {
+  gap: .55rem;
+  min-height: 150px;
+}
+
+html[data-theme] .slice-overview-step > span { color: var(--blue-ink); }
+
+html[data-theme] .slice-overview-step h3 {
+  margin: 0;
+  font: 700 1.1rem/1.05 var(--sans);
+  letter-spacing: -.04em;
+}
+
 @media (max-width: 760px) {
+  html[data-theme]:not([data-theme="neo"]) .about-card {
+    min-height: 220px;
+    padding: 1rem 1.15rem;
+  }
+
+  html[data-theme]:not([data-theme="neo"]) .about-card-label { margin-bottom: 1rem; }
+
+  html[data-theme]:not([data-theme="neo"]) .about-card p {
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+
   html[data-theme]:not([data-theme="neo"]) .project-main .widget-shell,
   html[data-theme]:not([data-theme="neo"]) .project-main .fortdb-diagram {
     padding: .9rem;
@@ -147,4 +218,26 @@ html[data-theme]:not([data-theme="neo"]) .project-main .screenshot-frame {
   }
 
   html[data-theme="mono"] .project-main .widget-shell { padding-top: 2.4rem; }
+
+  html[data-theme] .slice-overview-widget { grid-template-columns: 1fr; }
+
+  html[data-theme] .slice-overview-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 761px) {
+  html[data-theme]:not([data-theme="neo"]) .about-card {
+    min-height: 220px;
+    padding: 1rem 1.15rem;
+  }
+
+  html[data-theme]:not([data-theme="neo"]) .about-card-label { margin-bottom: 1rem; }
+
+  html[data-theme]:not([data-theme="neo"]) .about-card p {
+    font-size: .92rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 520px) {
+  html[data-theme] .slice-overview-flow { grid-template-columns: 1fr; }
 }
