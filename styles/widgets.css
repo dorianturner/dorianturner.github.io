@@ -164,3 +164,5 @@ select:hover, button:hover { background: var(--pink); color: var(--ink); transfo
   .fortdb-big-arrow, .fortdb-compaction-files > i { justify-self: center; transform: rotate(90deg); }
   .fortdb-read-chain { justify-content: flex-start; }
 }
+
+#architecture-visual .screenshot-grid { grid-template-columns: 1fr; }
