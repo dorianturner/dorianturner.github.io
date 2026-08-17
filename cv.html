@@ -43,9 +43,9 @@
         <article class="cv-entry">
           <div class="cv-entry-heading"><div><h3>Imperial College London</h3><p>BEng Computing</p></div><time>Oct. 2024 – June 2027</time></div>
           <ul>
-            <li><strong>Degree:</strong> 1:1 score achieved in Year 1. Predicted First Class (equiv. 4.0 GPA).</li>
-            <li><strong>Relevant Modules:</strong> Computer Systems — 82.53%, Databases — 78.04%, Algorithms — 77.33%.</li>
-            <li><strong>Achievements:</strong> Elected year-wide well-being representative; Most Interesting Extension, ARMV8 C Project Prize; Encode ARC '26 1st Place Overall; People's Choice Award in Amazon University Engagement Program.</li>
+            <li><strong>Degree:</strong> 1:1 score achieved in Year 1 and 2. Predicted First Class (equiv. 4.0 GPA).</li>
+            <li><strong>Relevant Modules:</strong> Machine Learning — 86.42%, Software Engineering — 84.16%, Operating Systems — 82.98%.</li>
+            <li><strong>Achievements:</strong> Elected as <strong>year-wide well-being representative</strong>, liaising between students and department; Most Interesting Extension, <strong>ARMV8 C Project Prize</strong> — Imperial College London; Encode ARC '26 <strong>1st Place Overall</strong> — best on-chain liquidity provider track, won $1000; <strong>People's Choice Award</strong> in Amazon University Engagement Program.</li>
           </ul>
         </article>
       </section>
@@ -53,19 +53,19 @@
       <section class="cv-section" aria-labelledby="cv-experience-title">
         <h2 id="cv-experience-title">Experience</h2>
         <article class="cv-entry">
-          <div class="cv-entry-heading"><div><h3>Software Intern / Bloomberg</h3><p>Core Products division</p></div><time>London, England<br>June 2026 – Ongoing</time></div>
+          <div class="cv-entry-heading"><div><h3>Software Intern / Bloomberg</h3><p>Core Products division</p></div><time>London, England<br>June 2026 – Sept. 2026</time></div>
           <ul>
-            <li>Optimising the performance of a <strong>latency-critical distributed microservice</strong> responsible for validating data entitlements in the core data flow of the Bloomberg Terminal.</li>
-            <li>Designing and implementing <strong>request batching</strong> in C++ to reduce network overhead, minimise redundant external service calls, and <strong>improve tail latency</strong>.</li>
-            <li>Analysing service bottlenecks through profiling and performance testing to identify inefficiencies and improve throughput in a high-scale distributed environment.</li>
-            <li>Collaborating with senior engineers to evaluate system trade-offs, validate performance improvements, and ensure reliability and scalability across production workflows.</li>
+            <li>Improved the performance of a <strong>latency-critical distributed C++ microservice</strong> in Bloomberg’s Core Products division, responsible for validating data entitlements in the core data flow of the Bloomberg Terminal.</li>
+            <li>Delivered a <strong>26x performance increase</strong> in the median latency case, and a <strong>13x performance increase</strong> in the max latency case for the concerned hot path.</li>
+            <li>Analysed service bottlenecks through <strong>profiling and load testing</strong> to identify inefficiencies and improve throughput in a high-scale distributed environment.</li>
+            <li><strong>Technologies:</strong> C++, Perf, Grafana, Locust, Strace, Flamegraph, Valgrind.</li>
           </ul>
         </article>
         <article class="cv-entry">
           <div class="cv-entry-heading"><div><h3>Software Intern / Bridge Technologies</h3><p>Broadcast monitoring and local AI tooling</p></div><time>Oslo, Norway<br>July 2025 – Aug. 2025</time></div>
           <ul>
-            <li>Developed a machine-learning tool to derive MOS image scores; it ran <strong>15% faster</strong> than the previous tool and was <strong>32% more correlated</strong> with human scores.</li>
-            <li>Researched and developed a glitch detection algorithm for macro-blocking artifacts in live broadcast streams.</li>
+            <li>Developed a machine learning based tool to derive MOS image scores for customers; it ran <strong>15% faster</strong> than the previous tool and was <strong>32%</strong> more correlated with human scores.</li>
+            <li>Researched and developed a glitch detection algorithm to detect macro-blocking artifacts in live broadcast, to monitor thousands of streams.</li>
             <li>Deployed LLMs via a Slack chatbot for documentation Q&amp;A and an FAQ website powered by a local RAG backend on a Mac Mini cluster.</li>
             <li><strong>Stack:</strong> Python, OpenCV, FFmpeg, C++, ChatGPT, Local LLM, and FAISS.</li>
           </ul>
@@ -78,7 +78,7 @@
           <div class="cv-entry-heading"><div><h3>FortDB <span>(Independent Duo Project)</span></h3></div><time><a href="https://github.com/dorianturner/fortdb" target="_blank" rel="noopener noreferrer">Git ↗</a><br>July – Aug. 2025</time></div>
           <ul>
             <li>Developed a <strong>thread-safe, NoSQL, append-only</strong> database in C with another student.</li>
-            <li>Designed custom abstract syntax trees for hierarchical data storage, enabling versioned path resolution, subdocument nesting, and time-travel queries with efficient traversal.</li>
+            <li>Designed <strong>custom abstract syntax trees (ASTs)</strong> for hierarchical data storage, enabling versioned path resolution, subdocument nesting, and time-travel queries with efficient traversal.</li>
             <li>Implemented concurrency and memory primitives: thread-safe hashmaps with versioned linked nodes.</li>
             <li><strong>Tools:</strong> C POSIX standard library, C, Nix, Linux, and NixOS.</li>
           </ul>
@@ -86,9 +86,9 @@
         <article class="cv-entry">
           <div class="cv-entry-heading"><div><h3>Slice <span>(Solo Project)</span></h3></div><time><a href="https://github.com/dorianturner/slice" target="_blank" rel="noopener noreferrer">Git ↗</a><br>Aug. 2026</time></div>
           <ul>
-            <li>Slice is a Linux x86-64 <strong>percentile profiler</strong> showing which call-stack paths occur during the slowest executions of one exact C++ function.</li>
+            <li>Developed a Linux x86-64 <strong>percentile profiler</strong> that allows a deeper analysis of which <strong>call-stack paths</strong> occur during different percentile executions of a chosen <strong>C++ function</strong>.</li>
             <li>Targets an exact <strong>demangled ELF symbol</strong> with uprobes, then combines eBPF sampling, invocation IDs, per-thread stacks, and percentile, thread, and time-range filters.</li>
-            <li>On a <strong>bimodally distributed C++ test service</strong>, a p95:p100 query isolates the tail, making the slow function more prominent than in the aggregate p00:p100 graph.</li>
+            <li><strong>Reveals the slow path flamegraph in the p95:p100 case</strong> for the execution of a function in a program (e.g. a running service) rather than just the aggregate.</li>
             <li><strong>Tools:</strong> Rust, C++, DWARF, Linux, CMake, Ninja.</li>
           </ul>
         </article>
