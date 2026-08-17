@@ -2,7 +2,7 @@ const root = document.querySelector("#project-app");
 const project = window.projectData;
 
 function renderScreenshots(target, visual) {
-  target.innerHTML = `<div class="screenshot-grid">${visual.images.map(([src, alt, caption]) => `<figure class="screenshot-card"><div class="screenshot-frame"><img src="${src}" alt="${alt}" loading="lazy"></div><figcaption><strong>${alt}</strong><span>${caption}</span></figcaption></figure>`).join("")}</div>`;
+  target.innerHTML = `<div class="screenshot-grid">${visual.images.map(([src, alt, caption]) => `<figure class="screenshot-card"><div class="screenshot-frame"><img src="${src}" alt="${alt}" loading="lazy" decoding="async" fetchpriority="low"></div><figcaption><strong>${alt}</strong><span>${caption}</span></figcaption></figure>`).join("")}</div>`;
 }
 
 if (!root || !project) {
