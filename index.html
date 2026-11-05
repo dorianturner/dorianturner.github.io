@@ -5,76 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Dorian Turner — computing student portfolio. Systems, compilers, applications, and embedded hardware.">
   <title>Dorian Turner — Portfolio</title>
-  <link rel="preload" href="assets/profile/dorian-headshot.png" as="image" type="image/png" fetchpriority="high">
-  <script src="js/theme-config.js"></script>
-  <script src="js/theme-preload.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/site.css">
   <link rel="stylesheet" href="styles/neo.css">
   <link rel="stylesheet" href="styles/widgets.css">
-  <link rel="stylesheet" href="styles/fungus.css">
-  <link rel="stylesheet" href="styles/mono.css">
-  <link rel="stylesheet" href="styles/web1.css">
-  <link rel="stylesheet" href="styles/retro.css">
-  <link rel="stylesheet" href="styles/eyesore.css">
-  <link rel="stylesheet" href="styles/theme-layout.css">
-  <link rel="stylesheet" href="styles/cv.css">
+  <link rel="stylesheet" href="styles/neo-layout.css">
+  <link rel="stylesheet" href="styles/home.css">
   <script src="js/site.js" defer></script>
 </head>
-<body>
+<body class="home-page">
   <header class="site-header">
     <a class="wordmark" href="index.html" aria-label="Dorian Turner portfolio home"><span class="wordmark-mark">DT</span><span>Dorian Turner</span></a>
-    <nav aria-label="Primary navigation"><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-    <div class="header-tools">
-      <label class="look-switcher" for="look-select"><span>Look</span><select id="look-select" name="look"><option value="neo">Neo-brutalist</option><option value="fungus">Organic</option><option value="mono">Old-school mono desktop</option><option value="web1">Web 1.0</option></select></label>
-      <span class="header-meta">Portfolio / 2026</span>
-    </div>
   </header>
 
   <main>
     <section class="home-hero" aria-labelledby="page-title">
       <div>
-        <p class="section-label">Computing student / Imperial College London</p>
         <h1 id="page-title">Dorian Turner</h1>
-        <p class="hero-summary">Performance Engineering, Compilers, and fun projects.</p>
-        <div class="hero-actions"><a class="cv-chip" href="cv.html">View CV <span aria-hidden="true">↗</span></a></div>
-      </div>
-      <figure class="hero-portrait">
-        <img src="assets/profile/dorian-headshot.png" alt="Portrait of Dorian Turner" width="400" height="400" decoding="async" fetchpriority="high">
-        <figcaption>Dorian Turner / computing student</figcaption>
-      </figure>
-    </section>
-
-    <section id="about" class="about-section" aria-labelledby="about-title">
-      <div class="section-heading about-heading"><div><p class="section-label">01 / About</p><h2 id="about-title">About me</h2></div></div>
-      <div class="about-copy">
-        <article class="about-card about-card-blue"><span class="about-card-label">01 / What I make</span><p>I’m Dorian, a Computing student at Imperial College London. I like playing around with ideas I have to make useful or fun projects that other people can use.</p></article>
-        <article class="about-card about-card-pink"><span class="about-card-label">02 / What I do</span><p>In my professional work, I primarily specialise in performance engineering in C++. Outside of that, I enjoy messing about with fun projects and taking on more technical problems, like compilers.</p></article>
+        <p class="hero-summary">Computing student with performance engineering experience.</p>
+        <div class="hero-actions"><a class="cv-chip" href="assets/cv/performance-engineering.pdf" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
     <section id="projects" class="projects-section" aria-labelledby="projects-title">
-      <div class="section-heading projects-heading"><div><p class="section-label">02 / Projects</p><h2 id="projects-title">Project Portfolio</h2></div></div>
+      <div class="section-heading projects-heading"><div><p class="section-label">01 / Projects</p><h2 id="projects-title">Project Portfolio</h2></div></div>
       <div class="project-index">
-        <article class="index-card index-card-blue"><span class="card-index">01</span><span class="card-type">C++ / Linux profiler</span><h3>Slice</h3><p>Percentile profiling for the slowest executions of one exact function.</p><span class="card-actions"><a class="card-link" href="projects/slice.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/slice" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-blue"><span class="card-index">02</span><span class="card-type">Web application / recommendation</span><h3>Fed Up</h3><p>Deadline-aware meal planning for students under workload pressure.</p><span class="card-actions"><a class="card-link" href="projects/fed-up.html">Open explainer →</a><a class="card-git" href="https://github.com/KOLESNiii/Fed-Up" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-neutral"><span class="card-index">03</span><span class="card-type">C / storage engine</span><h3>FortDB</h3><p>Append-only key-value database focused on durability.</p><span class="card-actions"><a class="card-link" href="projects/fortdb.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/fortdb/tree/main" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-lilac"><span class="card-index">04</span><span class="card-type">Multiplayer game / simulation</span><h3>Sightline</h3><p>Server-authoritative 2D tactical shooter with visibility control.</p><span class="card-actions"><a class="card-link" href="projects/tac-shooter.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/2D-Tac-Shooter" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-blue"><span class="card-index">05</span><span class="card-type">Solidity / CCTP / React</span><h3>MeanTime</h3><p>Tradeable on-chain receivables during cross-chain settlement.</p><span class="card-actions"><a class="card-link" href="projects/mean-time.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/Mean-Time" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-orange"><span class="card-index">06</span><span class="card-type">Embedded C / Raspberry Pi</span><h3>Cocktail Pi</h3><p>GPIO-controlled drink dispenser with LCD state feedback.</p><span class="card-actions"><a class="card-link" href="projects/cocktail-pi.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/cocktailpi" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-lilac"><span class="card-index">07</span><span class="card-type">Scala / compiler backend</span><h3>WACC compiler</h3><p>Compiler pipeline targeting x86-64 and ARM32 assembly.</p><span class="card-actions"><a class="card-link" href="projects/wacc.html">Open explainer →</a><a class="card-git" href="https://gitlab.doc.ic.ac.uk/lab2526_spring/wacc_05" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
-        <article class="index-card index-card-neutral"><span class="card-index">08</span><span class="card-type">Kotlin / Android</span><h3>Roomie</h3><p>Flatmate matching app for university students.</p><span class="card-actions"><a class="card-link" href="projects/roomie.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/Roomie" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">01</span><span class="card-type">C++ / Linux profiler</span><h3>Slice</h3><p>Percentile profiling for the slowest executions of one exact function.</p><span class="card-actions"><a class="card-link" href="projects/slice.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/slice" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">02</span><span class="card-type">Web application / recommendation</span><h3>Fed Up</h3><p>Deadline-aware meal planning for students under workload pressure.</p><span class="card-actions"><a class="card-link" href="projects/fed-up.html">Open explainer →</a><a class="card-git" href="https://github.com/KOLESNiii/Fed-Up" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">03</span><span class="card-type">C / storage engine</span><h3>FortDB</h3><p>Append-only key-value database focused on durability.</p><span class="card-actions"><a class="card-link" href="projects/fortdb.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/fortdb/tree/main" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">04</span><span class="card-type">Multiplayer game / simulation</span><h3>Sightline</h3><p>Server-authoritative 2D tactical shooter with visibility control.</p><span class="card-actions"><a class="card-link" href="projects/tac-shooter.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/2D-Tac-Shooter" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">05</span><span class="card-type">Solidity / CCTP / React</span><h3>MeanTime</h3><p>Tradeable on-chain receivables during cross-chain settlement.</p><span class="card-actions"><a class="card-link" href="projects/mean-time.html">Open explainer →</a><a class="card-git" href="https://github.com/dorianturner/Mean-Time" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">06</span><span class="card-type">Embedded C / Raspberry Pi</span><h3>Cocktail Pi</h3><p>GPIO-controlled drink dispenser with LCD state feedback.</p><span class="card-actions"><a class="card-link" href="projects/cocktail-pi.html">Project page →</a><a class="card-git" href="https://github.com/dorianturner/cocktailpi" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">07</span><span class="card-type">Scala / compiler backend</span><h3>WACC compiler</h3><p>Compiler pipeline targeting x86-64 and ARM32 assembly.</p><span class="card-actions"><a class="card-link" href="projects/wacc.html">Project page →</a><a class="card-git" href="https://gitlab.doc.ic.ac.uk/lab2526_spring/wacc_05" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
+        <article class="index-card"><span class="card-index">08</span><span class="card-type">Kotlin / Android</span><h3>Roomie</h3><p>Flatmate matching app for university students.</p><span class="card-actions"><a class="card-link" href="projects/roomie.html">Project page →</a><a class="card-git" href="https://github.com/dorianturner/Roomie" target="_blank" rel="noopener noreferrer">Git ↗</a></span></article>
       </div>
     </section>
 
     <section id="contact" class="contact-section" aria-labelledby="contact-title">
-      <div><p class="section-label">03 / Contact</p><h2 id="contact-title">Contact details</h2></div>
+      <div><p class="section-label">02 / Contact</p><h2 id="contact-title">Contact details</h2></div>
       <div class="contact-links"><a href="mailto:dorianturnerwork@gmail.com">Email <span>↗</span></a><a href="https://github.com/dorianturner" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://www.linkedin.com/in/dorian-turner/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a></div>
     </section>
   </main>
 
-  <footer class="site-footer"><span>Dorian Turner</span><span>Portfolio / 2026</span><a href="#projects">Projects ↑</a></footer>
+  <footer class="site-footer"><span>Dorian Turner</span><span>Portfolio / 2026</span></footer>
 </body>
 </html>

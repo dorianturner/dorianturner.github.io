@@ -1,4 +1,4 @@
-/* Neutral component and document structure. Visual themes live in their own files. */
+/* Shared component and document structure for the neo-brutalist site. */
 :root {
   --ink: #20242b;
   --muted: #66707a;
@@ -12,7 +12,6 @@
   --cream: #f2e7bd;
   --acid: #dceec2;
   --pink: #ead0d0;
-  --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", system-ui, sans-serif;
   --mono: "DM Mono", monospace;
 }
@@ -36,8 +35,8 @@ main { padding: 5.5rem 0 6rem; }
 .home-hero { display: grid; grid-template-columns: 1.3fr .7fr; gap: 4rem; align-items: end; min-height: 450px; padding-bottom: 6rem; }
 .section-label { margin: 0 0 1rem; color: var(--blue-ink); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { margin-bottom: 1.3rem; font: 700 clamp(4.5rem, 10vw, 9rem)/.9 var(--serif); letter-spacing: -.07em; }
-h2 { margin-bottom: 0; font: 600 clamp(2.5rem, 5vw, 4.6rem)/1 var(--serif); letter-spacing: -.06em; }
+h1 { margin-bottom: 1.3rem; font: 700 clamp(4.5rem, 10vw, 9rem)/.9 var(--sans); letter-spacing: -.07em; }
+h2 { margin-bottom: 0; font: 600 clamp(2.5rem, 5vw, 4.6rem)/1 var(--sans); letter-spacing: -.06em; }
 .hero-summary { max-width: 32rem; margin: 0; color: var(--muted); font-size: 1.08rem; }
 .hero-facts { margin: 0; border-top: 1px solid var(--line); }
 .hero-facts div { display: grid; grid-template-columns: 1fr 1.7fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
@@ -58,7 +57,7 @@ h2 { margin-bottom: 0; font: 600 clamp(2.5rem, 5vw, 4.6rem)/1 var(--serif); lett
 .index-card-neutral { background: #e9e8e1; }
 .card-index { position: absolute; top: 1.5rem; right: 1.5rem; color: rgba(32,36,43,.48); font-size: .66rem; }
 .card-type { align-self: flex-start; margin-bottom: auto; color: var(--muted); font-size: .63rem; letter-spacing: .06em; text-transform: uppercase; }
-.index-card h3 { margin: 0 0 .65rem; font: 600 clamp(2rem, 4vw, 3.6rem)/1 var(--serif); letter-spacing: -.06em; }
+.index-card h3 { margin: 0 0 .65rem; font: 600 clamp(2rem, 4vw, 3.6rem)/1 var(--sans); letter-spacing: -.06em; }
 .index-card p { max-width: 27rem; margin-bottom: 1.5rem; font-size: .88rem; }
 .card-link { padding-top: .85rem; border-top: 1px solid rgba(32,36,43,.22); font-size: .64rem; }
 

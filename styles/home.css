@@ -1,0 +1,92 @@
+/* Compact home layout: title card first, followed by the complete project grid. */
+.home-page .site-header {
+  min-height: 58px;
+  margin-top: .5rem;
+  padding: .45rem .75rem;
+  gap: 1rem;
+}
+
+.home-page main { padding-top: .75rem; padding-bottom: .5rem; }
+
+.home-page .home-hero {
+  grid-template-columns: 1fr;
+  gap: 0;
+  min-height: 0;
+  padding: .7rem 1.25rem;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.home-page .home-hero h1 {
+  margin-bottom: .55rem;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: .86;
+}
+
+.home-page .home-hero .section-label { margin-bottom: .45rem; font-size: .56rem; }
+.home-page .hero-summary { font-size: .95rem; line-height: 1.3; }
+.home-page .hero-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .65rem; }
+.home-page .cv-chip { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .6rem; border: 3px solid var(--ink); background: var(--acid); color: var(--ink); font: 700 .68rem/1 var(--mono); box-shadow: 5px 5px 0 var(--ink); }
+.home-page .cv-chip:hover { background: var(--pink); color: var(--ink); transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+.home-page .projects-section { padding: .8rem 0 .6rem; scroll-margin-top: .5rem; }
+.home-page .projects-heading { margin-bottom: .5rem; padding-top: .4rem; }
+.home-page .projects-heading .section-label { margin-bottom: .35rem; font-size: .56rem; }
+.home-page .projects-heading h2 { font-size: clamp(1.6rem, 2.5vw, 2.4rem); line-height: .95; }
+.home-page .project-index { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; }
+.home-page .index-card:nth-child(8n + 1),
+.home-page .index-card:nth-child(8n + 6) { background: var(--blue); }
+.home-page .index-card:nth-child(8n + 2),
+.home-page .index-card:nth-child(8n + 5) { background: var(--lilac); }
+.home-page .index-card:nth-child(8n + 3),
+.home-page .index-card:nth-child(8n + 8) { background: var(--orange); }
+.home-page .index-card:nth-child(8n + 4),
+.home-page .index-card:nth-child(8n + 7) { background: var(--cream); }
+.home-page .index-card {
+  min-height: 150px;
+  padding: .75rem;
+  border-width: 3px;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.home-page .index-card:hover { box-shadow: 8px 8px 0 var(--ink); }
+.home-page .card-index { top: .5rem; right: .5rem; padding: .18rem .28rem; }
+.home-page .card-type { max-width: calc(100% - 1.5rem); margin-bottom: .4rem; font-size: .52rem; line-height: 1.15; }
+.home-page .index-card h3 { margin-bottom: .3rem; font-size: clamp(1.3rem, 1.6vw, 1.85rem); line-height: .95; }
+.home-page .index-card p { margin-bottom: .5rem; font-size: .68rem; line-height: 1.22; }
+.home-page .card-actions { gap: .4rem; margin-top: auto; padding-top: .4rem; border-top-width: 2px; }
+.home-page .card-link { font-size: .53rem; }
+.home-page .card-git { padding: .26rem .32rem; font-size: .5rem; }
+
+.home-page .contact-section { padding: .65rem 0 .5rem; border-top-width: 3px; }
+.home-page .contact-section > div:first-child { margin-bottom: .4rem; }
+.home-page .contact-section .section-label { margin-bottom: .3rem; font-size: .54rem; }
+.home-page .contact-section h2 { font-size: clamp(1.25rem, 2vw, 1.8rem); line-height: 1; }
+.home-page .contact-links { gap: .5rem; }
+.home-page .contact-links a { min-height: 40px; padding: .4rem .6rem; border-width: 2px; box-shadow: 3px 3px 0 var(--ink); font-size: .72rem; }
+
+@media (min-width: 761px) and (max-width: 950px) {
+  .home-page .site-header,
+  .home-page main,
+  .home-page .site-footer { width: calc(100% - 32px); }
+}
+
+@media (max-width: 760px) {
+  .home-page .site-header { margin-top: .4rem; }
+  .home-page main { padding-top: .6rem; }
+  .home-page .home-hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: .55rem;
+  }
+  .home-page .home-hero h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  .home-page .home-hero .section-label { font-size: .48rem; }
+  .home-page .hero-summary { font-size: .7rem; }
+  .home-page .project-index { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem; }
+  .home-page .index-card { min-height: 128px; padding: .5rem; }
+  .home-page .card-index { top: .35rem; right: .35rem; }
+  .home-page .card-type { margin-bottom: .25rem; font-size: .46rem; }
+  .home-page .index-card h3 { margin-bottom: .2rem; font-size: clamp(1.05rem, 4vw, 1.4rem); }
+  .home-page .index-card p { display: -webkit-box; margin-bottom: .35rem; overflow: hidden; font-size: .58rem; line-height: 1.2; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .home-page .card-actions { gap: .25rem; padding-top: .3rem; }
+  .home-page .card-link { font-size: .45rem; }
+  .home-page .card-git { padding: .2rem .25rem; font-size: .44rem; }
+}

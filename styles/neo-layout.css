@@ -1,0 +1,150 @@
+/* Shared layout rules for the neo-brutalist site. */
+html {
+  --page-width: 1240px;
+  --page-gutter: 56px;
+  --hero-height: 500px;
+  --card-height: 330px;
+}
+
+html body { font-size: 16px; }
+html .site-header,
+html main,
+html .site-footer { width: min(var(--page-width), calc(100% - var(--page-gutter))); }
+
+html .site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 78px;
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+}
+
+html .site-header nav { order: initial; width: auto; }
+html .header-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: auto;
+  margin-left: auto;
+  padding-top: 0;
+  border-top: 0;
+}
+
+html main { padding-top: 5rem; }
+html .home-hero {
+  grid-template-columns: 1.25fr .75fr;
+  align-items: center;
+  min-height: var(--hero-height);
+  padding: 4.5rem 3rem 3rem;
+}
+html h1 { font-size: clamp(4rem, 10vw, 9rem); line-height: .82; }
+html h2 { font-size: clamp(2.5rem, 6vw, 5.5rem); line-height: .88; }
+html h3 { font-size: clamp(2.2rem, 4vw, 4rem); line-height: .95; }
+
+html .index-card { min-height: var(--card-height); }
+html .index-card { padding: 1.5rem; }
+html .contact-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+html .project-main { padding-top: 2.5rem; }
+html .project-header {
+  grid-template-columns: 1.2fr .8fr;
+  align-items: end;
+  min-height: var(--hero-height);
+  margin-top: 3rem;
+  padding: 4.5rem 3rem 3rem;
+}
+html .project-header h1 { font-size: clamp(4rem, 9vw, 8rem); line-height: .82; }
+html .project-section { padding: 3rem 0 5rem; }
+html .project-section-heading { grid-template-columns: 1fr 1.6fr; }
+html .explain-grid { grid-template-columns: repeat(3, 1fr); }
+html .explain-card { min-height: 190px; }
+
+@media (max-width: 760px) {
+  html {
+    --page-gutter: 32px;
+    --hero-height: auto;
+    --card-height: 280px;
+  }
+  html .site-header,
+  html main,
+  html .site-footer { width: min(calc(100% - var(--page-gutter)), 600px); }
+  html .site-header { margin-top: 1rem; }
+  html .site-header nav { order: 3; width: 100%; }
+  html .header-tools { order: 2; margin-left: auto; }
+  html .home-hero,
+  html .project-header { grid-template-columns: 1fr; gap: 2rem; }
+  html .home-hero { padding: 3rem 1.25rem 2rem; }
+  html .project-header { padding: 4rem 1.25rem 2rem; }
+  html .explain-grid { grid-template-columns: 1fr; }
+  html .contact-links { grid-template-columns: 1fr; }
+  html .project-section-heading { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Slice overview: keep the motivation and investigation loop in one bounded widget. */
+html .slice-overview-widget {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.6fr);
+  gap: 1rem;
+}
+
+html .slice-overview-copy,
+html .slice-overview-step {
+  display: grid;
+  align-content: start;
+  gap: .8rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+html .slice-overview-copy .phase-source,
+html .slice-overview-step > span {
+  margin: 0;
+  color: var(--blue-ink);
+  font: .65rem var(--mono);
+  text-transform: uppercase;
+}
+
+html .slice-overview-lead {
+  margin: 0;
+  font: 700 clamp(1.25rem, 2.3vw, 2rem)/1.1 var(--sans);
+  letter-spacing: -.04em;
+}
+
+html .slice-overview-context,
+html .slice-overview-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+html .slice-overview-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+html .slice-overview-step {
+  gap: .55rem;
+  min-height: 150px;
+}
+
+html .slice-overview-step > span { color: var(--blue-ink); }
+
+html .slice-overview-step h3 {
+  margin: 0;
+  font: 700 1.1rem/1.05 var(--sans);
+  letter-spacing: -.04em;
+}
+
+@media (max-width: 760px) {
+  html .slice-overview-widget { grid-template-columns: 1fr; }
+  html .slice-overview-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  html .slice-overview-flow { grid-template-columns: 1fr; }
+}

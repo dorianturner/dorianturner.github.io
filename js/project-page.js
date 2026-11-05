@@ -8,6 +8,20 @@ function renderScreenshots(target, visual) {
 if (!root || !project) {
   document.title = "Project not found — Dorian Turner";
   if (root) root.innerHTML = "<p>Project not found.</p>";
+} else if (project.demoOnly) {
+  document.title = `${project.title} — Dorian Turner`;
+  root.innerHTML = `<p class="slice-demo-description">${project.summary}</p><div id="project-widget" class="widget-shell"></div>`;
+  const visualRoot = document.querySelector("#project-widget");
+  const widget = window.projectWidgets?.[project.widget];
+  if (widget) widget(visualRoot, project);
+  else visualRoot.innerHTML = "<p class=\"widget-status\">Demo unavailable.</p>";
+} else if (project.simplePage) {
+  document.title = `${project.title} — Dorian Turner`;
+  root.innerHTML = `
+    <nav class="project-nav" aria-label="Project navigation"><a href="../index.html#projects">← Projects</a><span>${project.source}</span></nav>
+    <header class="project-header project-header-simple">
+      <div><p class="section-label">${project.category}</p><h1>${project.title}</h1><p class="project-summary">${project.summary}</p><div class="project-links"><a class="project-button" href="${project.sourceUrl}" target="_blank" rel="noopener noreferrer">Open Git repository ↗</a></div></div>
+    </header>`;
 } else {
   const visual = project.visual || {
     type: "widget",
